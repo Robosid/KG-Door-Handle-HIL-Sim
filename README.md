@@ -7,10 +7,22 @@
 Design Overview 
 ---------------
 
-![Verilog Module Control Flow Diagram - RS232 based](img/rs232.jpg "Verilog Module Control Flow Diagram - RS232 based")
+![Verilog Module Control Flow Diagram - RS232 based](img/Flow_rs232.jpg "Verilog Module Control Flow Diagram - RS232 based")
 
-**Figure 1 Verilog Module Control Flow Diagram - RS232 based**
+**Figure 1: Verilog Module Control Flow Diagram - RS232 based**
 
-![Verilog Module Control Flow Diagram - Ethernet based](img/eth.jpg "Verilog Module Control Flow Diagram - Ethernet based")
+![Verilog Module Control Flow Diagram - Ethernet based](img/flow_eth.jpg "Verilog Module Control Flow Diagram - Ethernet based")
 
-**Figure 2 Verilog Module Control Flow Diagram - Ethernet based**
+**Figure 2: Verilog Module Control Flow Diagram - Ethernet based**
+
+![Ethernet Packet Generator](img/eth_packet_generator.jpg "Ethernet Packet Generator")
+
+**Figure 3: Ethernet Packet Generator**
+
+![Ethernet Packet Generator Output Frame Format](img/epg_output_frame_format.jpg "Ethernet Packet Generator Output Frame Format")
+
+**Figure 4: Ethernet Packet Generator Output Frame Format**
+
+![Ethernet Packet Monitor](img/flow_eth.jpg "Ethernet Packet Monitor")
+
+**Figure 5: Ethernet Packet Monitor**
