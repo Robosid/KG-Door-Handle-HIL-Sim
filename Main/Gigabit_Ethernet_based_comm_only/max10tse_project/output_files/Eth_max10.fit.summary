@@ -1,0 +1,18 @@
+Fitter Status : Successful - Thu Aug 02 16:03:41 2018
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+Revision Name : Eth_max10
+Top-level Entity Name : top
+Family : MAX 10
+Device : 10M50DAF484C6GES
+Timing Models : Preliminary
+Total logic elements : 9,500 / 49,760 ( 19 % )
+    Total combinational functions : 7,387 / 49,760 ( 15 % )
+    Dedicated logic registers : 5,978 / 49,760 ( 12 % )
+Total registers : 5990
+Total pins : 27 / 360 ( 8 % )
+Total virtual pins : 0
+Total memory bits : 608,769 / 1,677,312 ( 36 % )
+Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )

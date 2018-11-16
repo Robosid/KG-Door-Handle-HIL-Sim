@@ -1,0 +1,11 @@
+	component nios_system is
+		port (
+			clk_clk                                : in  std_logic := 'X'; -- clk
+			reset_reset_n                          : in  std_logic := 'X'; -- reset_n
+			tse_mac_mac_status_connection_set_10   : in  std_logic := 'X'; -- set_10
+			tse_mac_mac_status_connection_set_1000 : in  std_logic := 'X'; -- set_1000
+			tse_mac_mac_status_connection_eth_mode : out std_logic;        -- eth_mode
+			tse_mac_mac_status_connection_ena_10   : out std_logic         -- ena_10
+		);
+	end component nios_system;
+

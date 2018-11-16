@@ -1,0 +1,75 @@
+C:/intelFPGA/18.0/rs232_nandland/top.v {1 {vlog -work work -stats=none C:/intelFPGA/18.0/rs232_nandland/top.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}} C:/intelFPGA/18.0/rs232_nandland/uart_tx.v {1 {vlog -work work -stats=none C:/intelFPGA/18.0/rs232_nandland/uart_tx.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module uart_tx
+
+Top level modules:
+	uart_tx
+
+} {} {}} C:/intelFPGA/18.0/rs232_nandland/uart_tb.v {1 {vlog -work work -stats=none C:/intelFPGA/18.0/rs232_nandland/uart_tb.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module uart_tx
+-- Compiling module uart_rx
+-- Compiling module uart_tb
+
+Top level modules:
+	uart_tb
+
+} {} {}} C:/intelFPGA/18.0/rs232_nandland/uart_rx.v {1 {vlog -work work -stats=none C:/intelFPGA/18.0/rs232_nandland/uart_rx.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module uart_rx
+
+Top level modules:
+	uart_rx
+
+} {} {}} C:/intelFPGA/18.0/rs232_nandland/sqwavegen.v {1 {vlog -work work -stats=none C:/intelFPGA/18.0/rs232_nandland/sqwavegen.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module sqwaveGen
+
+Top level modules:
+	sqwaveGen
+
+} {} {}} C:/intelFPGA/18.0/rs232_nandland/rst_ctrl.v {1 {vlog -work work -stats=none C:/intelFPGA/18.0/rs232_nandland/rst_ctrl.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module rst_ctrl
+
+Top level modules:
+	rst_ctrl
+
+} {} {}} C:/intelFPGA/18.0/rs232_nandland/buffer.v {1 {vlog -work work -stats=none C:/intelFPGA/18.0/rs232_nandland/buffer.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module buffer
+
+Top level modules:
+	buffer
+
+} {} {}} C:/intelFPGA/18.0/rs232_nandland/uart_tb_2.v {1 {vlog -work work -stats=none C:/intelFPGA/18.0/rs232_nandland/uart_tb_2.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module uart_tx
+-- Compiling module uart_rx
+-- Compiling module uart_tb_2
+
+Top level modules:
+	uart_tb_2
+
+} {} {}} C:/intelFPGA/18.0/rs232_nandland/gen.v {1 {vlog -work work -stats=none C:/intelFPGA/18.0/rs232_nandland/gen.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module gen
+
+Top level modules:
+	gen
+
+} {} {}} C:/intelFPGA/18.0/rs232_nandland/tb.v {1 {vlog -work work -stats=none C:/intelFPGA/18.0/rs232_nandland/tb.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module sqwavegentb
+
+Top level modules:
+	sqwavegentb
+
+} {} {}}

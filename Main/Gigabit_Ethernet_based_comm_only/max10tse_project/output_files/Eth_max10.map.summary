@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Thu Aug 02 16:01:00 2018
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+Revision Name : Eth_max10
+Top-level Entity Name : top
+Family : MAX 10
+Total logic elements : 10,447
+    Total combinational functions : 7,371
+    Dedicated logic registers : 5,988
+Total registers : 6000
+Total pins : 26
+Total virtual pins : 0
+Total memory bits : 608,769
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1
+UFM blocks : 0
+ADC blocks : 0

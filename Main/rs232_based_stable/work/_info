@@ -1,0 +1,231 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/18.0
+vbuffer
+!s110 1533738110
+!i10b 1
+!s100 7@AkDBB[>Q0J3m27:g1fD0
+Ikj_F3<LdhDOBJV8==8C<a2
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dC:/intelFPGA/18.0/rs232_nandland
+w1533738099
+8C:/intelFPGA/18.0/rs232_nandland/buffer.v
+FC:/intelFPGA/18.0/rs232_nandland/buffer.v
+L0 1
+Z2 OV;L;10.4d;61
+r1
+!s85 0
+31
+!s108 1533738109.000000
+!s107 C:/intelFPGA/18.0/rs232_nandland/buffer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA/18.0/rs232_nandland/buffer.v|
+!i113 1
+Z3 o-work work
+vgen
+Z4 !s110 1533737921
+!i10b 1
+!s100 cig35g[fA>EJJbP0De[VU3
+I;jS2fY7defN6L>Z49UMTB2
+R0
+R1
+w1533141930
+8C:/intelFPGA/18.0/rs232_nandland/gen.v
+FC:/intelFPGA/18.0/rs232_nandland/gen.v
+L0 1
+R2
+r1
+!s85 0
+31
+Z5 !s108 1533737921.000000
+!s107 C:/intelFPGA/18.0/rs232_nandland/gen.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA/18.0/rs232_nandland/gen.v|
+!i113 1
+R3
+vrst_ctrl
+!s110 1533737922
+!i10b 1
+!s100 OO3ezoJ8zdzU0OZdWRO>S3
+Io=MIPSDATi>eNXkd^a?030
+R0
+R1
+w1533501388
+8C:/intelFPGA/18.0/rs232_nandland/rst_ctrl.v
+FC:/intelFPGA/18.0/rs232_nandland/rst_ctrl.v
+L0 1
+R2
+r1
+!s85 0
+31
+R5
+!s107 C:/intelFPGA/18.0/rs232_nandland/rst_ctrl.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA/18.0/rs232_nandland/rst_ctrl.v|
+!i113 1
+R3
+vsqwaveGen
+R4
+!i10b 1
+!s100 83H[hLkO[S@icVRildI6f2
+IM;Pjh9gf=I:feknR9R8Jf0
+R0
+R1
+w1532978321
+8C:/intelFPGA/18.0/rs232_nandland/sqwavegen.v
+FC:/intelFPGA/18.0/rs232_nandland/sqwavegen.v
+L0 2
+R2
+r1
+!s85 0
+31
+R5
+!s107 C:/intelFPGA/18.0/rs232_nandland/sqwavegen.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA/18.0/rs232_nandland/sqwavegen.v|
+!i113 1
+R3
+nsqwave@gen
+vsqwavegentb
+R4
+!i10b 1
+!s100 n45Um`X9kn^o3U8XATon]0
+IzfzHiL9I@V]Y47^;PhY<E2
+R0
+R1
+w1532978282
+8C:/intelFPGA/18.0/rs232_nandland/tb.v
+FC:/intelFPGA/18.0/rs232_nandland/tb.v
+L0 2
+R2
+r1
+!s85 0
+31
+R5
+!s107 C:/intelFPGA/18.0/rs232_nandland/tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA/18.0/rs232_nandland/tb.v|
+!i113 1
+R3
+vtop
+!s110 1533738137
+!i10b 1
+!s100 d:7MCCY6ZPZ;NW4UV[?kn0
+Iz8[h?mH4`dc^ZQ7X;G0Tn0
+R0
+R1
+w1533737928
+8C:/intelFPGA/18.0/rs232_nandland/top.v
+FC:/intelFPGA/18.0/rs232_nandland/top.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1533738137.000000
+!s107 C:/intelFPGA/18.0/rs232_nandland/top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA/18.0/rs232_nandland/top.v|
+!i113 1
+R3
+vtop_model
+!s110 1533814638
+!i10b 1
+!s100 JnBNiC]06ZHP53AB4DBDd2
+IT]mGXeBR^g4MJ[GeJMjK:1
+R0
+R1
+w1533814632
+8C:/intelFPGA/18.0/rs232_nandland/top_model.v
+FC:/intelFPGA/18.0/rs232_nandland/top_model.v
+L0 7
+R2
+r1
+!s85 0
+31
+!s108 1533814637.000000
+!s107 uart_rx.v|uart_tx.v|C:/intelFPGA/18.0/rs232_nandland/top_model.v|
+Z6 !s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA/18.0/rs232_nandland/top_model.v|
+!i113 1
+R3
+vuart_rx
+Z7 !s110 1533814705
+!i10b 1
+!s100 364DzXNeb2W^G8NYLZ<ob2
+IkgOk4hMFS?BOLWQV_e7N60
+R0
+R1
+w1532970046
+8uart_rx.v
+Fuart_rx.v
+Z8 L0 12
+R2
+r1
+!s85 0
+31
+Z9 !s108 1533814705.000000
+Z10 !s107 uart_rx.v|uart_tx.v|C:/intelFPGA/18.0/rs232_nandland/top_model.v|
+R6
+!i113 1
+R3
+vuart_tb
+R4
+!i10b 1
+!s100 @lCIHDfe8C6e`fS;UgQd`3
+I4Ogkhda87T0L]7<MzFfOF0
+R0
+R1
+w1533503763
+8C:/intelFPGA/18.0/rs232_nandland/uart_tb.v
+FC:/intelFPGA/18.0/rs232_nandland/uart_tb.v
+R8
+R2
+r1
+!s85 0
+31
+R5
+!s107 uart_rx.v|uart_tx.v|C:/intelFPGA/18.0/rs232_nandland/uart_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA/18.0/rs232_nandland/uart_tb.v|
+!i113 1
+R3
+vuart_tb_2
+R4
+!i10b 1
+!s100 JAB>d]Ag]gT7eQR@5^8Wo2
+I7mG4U;HBl57b8FIn?oUHb1
+R0
+R1
+w1533503659
+8C:/intelFPGA/18.0/rs232_nandland/uart_tb_2.v
+FC:/intelFPGA/18.0/rs232_nandland/uart_tb_2.v
+L0 9
+R2
+r1
+!s85 0
+31
+R5
+!s107 uart_rx.v|uart_tx.v|C:/intelFPGA/18.0/rs232_nandland/uart_tb_2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA/18.0/rs232_nandland/uart_tb_2.v|
+!i113 1
+R3
+vuart_tx
+R7
+!i10b 1
+!s100 gCUNBkCoKiAQ6`fgQC?^i3
+IPm3>VbhIe;IkHF4mT]z[F3
+R0
+R1
+w1532970073
+8uart_tx.v
+Fuart_tx.v
+R8
+R2
+r1
+!s85 0
+31
+R9
+R10
+R6
+!i113 1
+R3

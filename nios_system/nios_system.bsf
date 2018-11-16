@@ -1,0 +1,94 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 544 232)
+	(text "nios_system" (rect 235 -1 286 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 216 20 228)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "clk_clk" (rect 0 0 27 12)(font "Arial" (font_size 8)))
+		(text "clk_clk" (rect 4 61 46 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 240 72)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "reset_reset_n" (rect 0 0 56 12)(font "Arial" (font_size 8)))
+		(text "reset_reset_n" (rect 4 101 82 112)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 240 112)(line_width 1))
+	)
+	(port
+		(pt 0 152)
+		(input)
+		(text "tse_mac_mac_status_connection_set_10" (rect 0 0 167 12)(font "Arial" (font_size 8)))
+		(text "tse_mac_mac_status_connection_set_10" (rect 4 141 220 152)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 240 152)(line_width 1))
+	)
+	(port
+		(pt 0 168)
+		(input)
+		(text "tse_mac_mac_status_connection_set_1000" (rect 0 0 177 12)(font "Arial" (font_size 8)))
+		(text "tse_mac_mac_status_connection_set_1000" (rect 4 157 232 168)(font "Arial" (font_size 8)))
+		(line (pt 0 168)(pt 240 168)(line_width 1))
+	)
+	(port
+		(pt 0 184)
+		(output)
+		(text "tse_mac_mac_status_connection_eth_mode" (rect 0 0 181 12)(font "Arial" (font_size 8)))
+		(text "tse_mac_mac_status_connection_eth_mode" (rect 4 173 232 184)(font "Arial" (font_size 8)))
+		(line (pt 0 184)(pt 240 184)(line_width 1))
+	)
+	(port
+		(pt 0 200)
+		(output)
+		(text "tse_mac_mac_status_connection_ena_10" (rect 0 0 169 12)(font "Arial" (font_size 8)))
+		(text "tse_mac_mac_status_connection_ena_10" (rect 4 189 220 200)(font "Arial" (font_size 8)))
+		(line (pt 0 200)(pt 240 200)(line_width 1))
+	)
+	(drawing
+		(text "clk" (rect 225 43 468 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 245 67 508 144)(font "Arial" (color 0 0 0)))
+		(text "reset" (rect 211 83 452 179)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset_n" (rect 245 107 532 224)(font "Arial" (color 0 0 0)))
+		(text "tse_mac_mac_status_connection" (rect 46 123 266 259)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "set_10" (rect 245 147 526 304)(font "Arial" (color 0 0 0)))
+		(text "set_1000" (rect 245 163 538 336)(font "Arial" (color 0 0 0)))
+		(text "eth_mode" (rect 245 179 538 368)(font "Arial" (color 0 0 0)))
+		(text "ena_10" (rect 245 195 526 400)(font "Arial" (color 0 0 0)))
+		(text " system " (rect 509 216 1066 442)(font "Arial" ))
+		(line (pt 240 32)(pt 304 32)(line_width 1))
+		(line (pt 304 32)(pt 304 216)(line_width 1))
+		(line (pt 240 216)(pt 304 216)(line_width 1))
+		(line (pt 240 32)(pt 240 216)(line_width 1))
+		(line (pt 241 52)(pt 241 76)(line_width 1))
+		(line (pt 242 52)(pt 242 76)(line_width 1))
+		(line (pt 241 92)(pt 241 116)(line_width 1))
+		(line (pt 242 92)(pt 242 116)(line_width 1))
+		(line (pt 241 132)(pt 241 204)(line_width 1))
+		(line (pt 242 132)(pt 242 204)(line_width 1))
+		(line (pt 0 0)(pt 544 0)(line_width 1))
+		(line (pt 544 0)(pt 544 232)(line_width 1))
+		(line (pt 0 232)(pt 544 232)(line_width 1))
+		(line (pt 0 0)(pt 0 232)(line_width 1))
+	)
+)

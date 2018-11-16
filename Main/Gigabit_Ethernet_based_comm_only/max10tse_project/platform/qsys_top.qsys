@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="System" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element aso_splitter_0
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+   element clk_0
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element error_adapter2_0
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element eth_gen_0
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element eth_mon_0
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element master_0
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element st_mux_2_to_1_0
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element triple_speed_ethernet_0
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+      datum megawizard_uipreferences
+      {
+         value = "{}";
+         type = "String";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="10M50DAF484C6GES" />
+ <parameter name="deviceFamily" value="MAX 10" />
+ <parameter name="deviceSpeedGrade" value="6" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="false" />
+ <parameter name="lockedInterfaceDefinition" value="" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
+ <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
+ <interface
+   name="triple_speed_ethernet_0_conduit_connection"
+   internal="triple_speed_ethernet_0.conduit_connection" />
+ <interface
+   name="triple_speed_ethernet_0_mac_mdio_connection"
+   internal="triple_speed_ethernet_0.mac_mdio_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="triple_speed_ethernet_0_mac_misc_connection"
+   internal="triple_speed_ethernet_0.mac_misc_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="triple_speed_ethernet_0_mac_rgmii_connection"
+   internal="triple_speed_ethernet_0.mac_rgmii_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="triple_speed_ethernet_0_mac_status_connection"
+   internal="triple_speed_ethernet_0.mac_status_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="triple_speed_ethernet_0_pcs_mac_rx_clock_connection"
+   internal="triple_speed_ethernet_0.pcs_mac_rx_clock_connection"
+   type="clock"
+   dir="end" />
+ <interface
+   name="triple_speed_ethernet_0_pcs_mac_tx_clock_connection"
+   internal="triple_speed_ethernet_0.pcs_mac_tx_clock_connection"
+   type="clock"
+   dir="end" />
+ <module name="aso_splitter_0" kind="aso_splitter" version="1.0" enabled="1" />
+ <module name="clk_0" kind="clock_source" version="15.1" enabled="1">
+  <parameter name="clockFrequency" value="100000000" />
+  <parameter name="clockFrequencyKnown" value="true" />
+  <parameter name="inputClockFrequency" value="0" />
+  <parameter name="resetSynchronousEdges" value="NONE" />
+ </module>
+ <module
+   name="error_adapter2_0"
+   kind="error_adapter2"
+   version="1.0"
+   enabled="1">
+  <parameter name="data_width" value="32" />
+  <parameter name="empty_width" value="2" />
+  <parameter name="in_error_width" value="6" />
+  <parameter name="out_error_width" value="1" />
+ </module>
+ <module name="eth_gen_0" kind="eth_gen" version="1.0" enabled="1">
+  <parameter name="state_data" value="5" />
+  <parameter name="state_dest" value="1" />
+  <parameter name="state_dest_src" value="2" />
+  <parameter name="state_idle" value="0" />
+  <parameter name="state_len_seq" value="4" />
+  <parameter name="state_src" value="3" />
+  <parameter name="state_transition" value="6" />
+ </module>
+ <module name="eth_mon_0" kind="eth_mon" version="1.0" enabled="1" />
+ <module
+   name="master_0"
+   kind="altera_jtag_avalon_master"
+   version="15.1"
+   enabled="1">
+  <parameter name="AUTO_DEVICE" value="10M50DAF484C6GES" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="MAX 10" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <parameter name="COMPONENT_CLOCK" value="0" />
+  <parameter name="FAST_VER" value="0" />
+  <parameter name="FIFO_DEPTHS" value="2" />
+  <parameter name="PLI_PORT" value="50000" />
+  <parameter name="USE_PLI" value="0" />
+ </module>
+ <module name="st_mux_2_to_1_0" kind="st_mux_2_to_1" version="1.0" enabled="1" />
+ <module
+   name="triple_speed_ethernet_0"
+   kind="altera_eth_tse"
+   version="15.1"
+   enabled="1">
+  <parameter name="AUTO_DEVICE" value="10M50DAF484C6GES" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <parameter name="core_variation" value="MAC_ONLY" />
+  <parameter name="deviceFamilyName" value="MAX 10" />
+  <parameter name="eg_addr" value="13" />
+  <parameter name="ena_hash" value="false" />
+  <parameter name="enable_alt_reconfig" value="false" />
+  <parameter name="enable_ecc" value="false" />
+  <parameter name="enable_ena" value="32" />
+  <parameter name="enable_gmii_loopback" value="true" />
+  <parameter name="enable_hd_logic" value="true" />
+  <parameter name="enable_mac_flow_ctrl" value="true" />
+  <parameter name="enable_mac_vlan" value="false" />
+  <parameter name="enable_magic_detect" value="false" />
+  <parameter name="enable_ptp_1step" value="false" />
+  <parameter name="enable_sgmii" value="false" />
+  <parameter name="enable_shift16" value="true" />
+  <parameter name="enable_sup_addr" value="false" />
+  <parameter name="enable_timestamping" value="false" />
+  <parameter name="enable_use_internal_fifo" value="true" />
+  <parameter name="export_pwrdn" value="false" />
+  <parameter name="ext_stat_cnt_ena" value="false" />
+  <parameter name="ifGMII" value="RGMII" />
+  <parameter name="ing_addr" value="13" />
+  <parameter name="max_channels" value="1" />
+  <parameter name="mdio_clk_div" value="50" />
+  <parameter name="nf_phyip_rcfg_enable" value="false" />
+  <parameter name="phy_identifier" value="0" />
+  <parameter name="phyip_en_synce_support" value="false" />
+  <parameter name="phyip_pll_base_data_rate" value="1250 Mbps" />
+  <parameter name="phyip_pll_type" value="CMU" />
+  <parameter name="phyip_pma_bonding_mode" value="x1" />
+  <parameter name="starting_channel_number" value="0" />
+  <parameter name="stat_cnt_ena" value="true" />
+  <parameter name="transceiver_type" value="NONE" />
+  <parameter name="tstamp_fp_width" value="4" />
+  <parameter name="useMDIO" value="true" />
+  <parameter name="use_mac_clken" value="false" />
+  <parameter name="use_misc_ports" value="true" />
+ </module>
+ <connection
+   kind="avalon"
+   version="15.1"
+   start="master_0.master"
+   end="eth_mon_0.avalon_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0800" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.1"
+   start="master_0.master"
+   end="eth_gen_0.avalon_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0c00" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.1"
+   start="master_0.master"
+   end="triple_speed_ethernet_0.control_port">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.1"
+   start="master_0.master"
+   end="st_mux_2_to_1_0.control_port">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0400" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon_streaming"
+   version="15.1"
+   start="eth_gen_0.avalon_streaming_source"
+   end="st_mux_2_to_1_0.sink1" />
+ <connection
+   kind="avalon_streaming"
+   version="15.1"
+   start="error_adapter2_0.out"
+   end="st_mux_2_to_1_0.sink0" />
+ <connection
+   kind="avalon_streaming"
+   version="15.1"
+   start="triple_speed_ethernet_0.receive"
+   end="aso_splitter_0.sink" />
+ <connection
+   kind="avalon_streaming"
+   version="15.1"
+   start="st_mux_2_to_1_0.source"
+   end="triple_speed_ethernet_0.transmit" />
+ <connection
+   kind="avalon_streaming"
+   version="15.1"
+   start="aso_splitter_0.source0"
+   end="error_adapter2_0.in" />
+ <connection
+   kind="avalon_streaming"
+   version="15.1"
+   start="aso_splitter_0.source1"
+   end="eth_mon_0.avalon_streaming_sink" />
+ <connection kind="clock" version="15.1" start="clk_0.clk" end="master_0.clk" />
+ <connection
+   kind="clock"
+   version="15.1"
+   start="clk_0.clk"
+   end="error_adapter2_0.clock_reset" />
+ <connection
+   kind="clock"
+   version="15.1"
+   start="clk_0.clk"
+   end="st_mux_2_to_1_0.clock_reset" />
+ <connection
+   kind="clock"
+   version="15.1"
+   start="clk_0.clk"
+   end="eth_mon_0.clock_reset" />
+ <connection
+   kind="clock"
+   version="15.1"
+   start="clk_0.clk"
+   end="eth_gen_0.clock_reset" />
+ <connection
+   kind="clock"
+   version="15.1"
+   start="clk_0.clk"
+   end="st_mux_2_to_1_0.clock_st" />
+ <connection
+   kind="clock"
+   version="15.1"
+   start="clk_0.clk"
+   end="aso_splitter_0.clock_st" />
+ <connection
+   kind="clock"
+   version="15.1"
+   start="clk_0.clk"
+   end="eth_mon_0.clock_st" />
+ <connection
+   kind="clock"
+   version="15.1"
+   start="clk_0.clk"
+   end="eth_gen_0.clock_st" />
+ <connection
+   kind="clock"
+   version="15.1"
+   start="clk_0.clk"
+   end="triple_speed_ethernet_0.control_port_clock_connection" />
+ <connection
+   kind="clock"
+   version="15.1"
+   start="clk_0.clk"
+   end="triple_speed_ethernet_0.receive_clock_connection" />
+ <connection
+   kind="clock"
+   version="15.1"
+   start="clk_0.clk"
+   end="triple_speed_ethernet_0.transmit_clock_connection" />
+ <connection
+   kind="reset"
+   version="15.1"
+   start="clk_0.clk_reset"
+   end="master_0.clk_reset" />
+ <connection
+   kind="reset"
+   version="15.1"
+   start="clk_0.clk_reset"
+   end="error_adapter2_0.clock_reset_reset" />
+ <connection
+   kind="reset"
+   version="15.1"
+   start="clk_0.clk_reset"
+   end="st_mux_2_to_1_0.clock_reset_reset" />
+ <connection
+   kind="reset"
+   version="15.1"
+   start="clk_0.clk_reset"
+   end="eth_mon_0.clock_reset_reset" />
+ <connection
+   kind="reset"
+   version="15.1"
+   start="clk_0.clk_reset"
+   end="eth_gen_0.clock_reset_reset" />
+ <connection
+   kind="reset"
+   version="15.1"
+   start="clk_0.clk_reset"
+   end="aso_splitter_0.clock_st_reset" />
+ <connection
+   kind="reset"
+   version="15.1"
+   start="clk_0.clk_reset"
+   end="triple_speed_ethernet_0.reset_connection" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>

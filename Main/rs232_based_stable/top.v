@@ -1,0 +1,26 @@
+/*Copyright [2018] [Siddhant Mahapatra]
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    https://github.com/Robosid/Drone-Intelligence/blob/master/License.rtf
+    https://github.com/Robosid/Drone-Intelligence/blob/master/License.pdf
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+
+module top (sys_clk, main_out, serial_rx_in);
+
+input sys_clk;			//better be 10MHz
+input serial_rx_in;
+output main_out;
+
+top_model tp1(.r_Clock(sys_clk), .out(main_out), .rx_in(serial_rx_in));
+
+endmodule

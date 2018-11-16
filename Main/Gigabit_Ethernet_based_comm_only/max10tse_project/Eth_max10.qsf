@@ -1,0 +1,120 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, the Altera Quartus Prime License Agreement,
+# the Altera MegaCore Function License Agreement, or other 
+# applicable license agreement, including, without limitation, 
+# that your use is for the sole purpose of programming logic 
+# devices manufactured by Altera and sold by Altera or its 
+# authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+# Date created = 14:42:08  August 02, 2018
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Eth_max10_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "MAX 10"
+set_global_assignment -name DEVICE 10M50DAF484C6GES
+set_global_assignment -name TOP_LEVEL_ENTITY top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 11.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:36:23  MAY 24, 2011"
+set_global_assignment -name LAST_QUARTUS_VERSION 16.0.0
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 2
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name SMART_RECOMPILE OFF
+set_location_assignment PIN_M9 -to clk_50_max10
+set_location_assignment PIN_D9 -to fpga_resetn
+set_location_assignment PIN_T20 -to user_led[0]
+set_location_assignment PIN_U22 -to user_led[1]
+set_location_assignment PIN_U21 -to user_led[2]
+set_location_assignment PIN_AA21 -to user_led[3]
+set_location_assignment PIN_AA22 -to user_led[4]
+set_location_assignment PIN_L22 -to user_pb[0]
+set_location_assignment PIN_M21 -to user_pb[1]
+set_location_assignment PIN_M22 -to user_pb[2]
+set_location_assignment PIN_N21 -to user_pb[3]
+set_location_assignment PIN_Y6 -to enet_mdc
+set_location_assignment PIN_Y5 -to enet_mdio
+set_location_assignment PIN_T5 -to enet_gtx_clk
+set_location_assignment PIN_V8 -to enet_resetn
+set_location_assignment PIN_P3 -to enet_rx_clk
+set_location_assignment PIN_N9 -to enet_rx_d[0]
+set_location_assignment PIN_T1 -to enet_rx_d[1]
+set_location_assignment PIN_N1 -to enet_rx_d[2]
+set_location_assignment PIN_T3 -to enet_rx_d[3]
+set_location_assignment PIN_T2 -to enet_rx_dv
+set_location_assignment PIN_R5 -to enet_tx_d[0]
+set_location_assignment PIN_P5 -to enet_tx_d[1]
+set_location_assignment PIN_W1 -to enet_tx_d[2]
+set_location_assignment PIN_W2 -to enet_tx_d[3]
+set_location_assignment PIN_R4 -to enet_tx_en
+set_instance_assignment -name IO_STANDARD LVDS -to clk_50_max10
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to fpga_resetn
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_led[0]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_led[1]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_led[2]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_led[3]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_led[4]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_pb[0]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_pb[1]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_pb[2]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_pb[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to enet_gtx_clk
+set_instance_assignment -name IO_STANDARD "2.5 V" -to enet_resetn
+set_instance_assignment -name IO_STANDARD "2.5 V" -to enet_rx_clk
+set_instance_assignment -name IO_STANDARD "2.5 V" -to enet_rx_d[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to enet_rx_d[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to enet_rx_d[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to enet_rx_d[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to enet_rx_dv
+set_instance_assignment -name IO_STANDARD "2.5 V" -to enet_tx_d[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to enet_tx_d[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to enet_tx_d[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to enet_tx_d[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to enet_tx_en
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
+set_global_assignment -name SEED 2
+set_instance_assignment -name GLOBAL_SIGNAL_CLKCTRL_LOCATION CLKCTRL_G2 -to enet_rx_clk
+set_global_assignment -name OPTIMIZE_HOLD_TIMING "ALL PATHS"
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
+set_global_assignment -name OPTIMIZATION_MODE BALANCED
+set_global_assignment -name ROUTER_TIMING_OPTIMIZATION_LEVEL MAXIMUM
+set_global_assignment -name QIP_FILE platform/pll.qip
+set_global_assignment -name VERILOG_FILE platform/debounce.v
+set_global_assignment -name QIP_FILE platform/gtx_clk.qip
+set_global_assignment -name QIP_FILE platform/qsys_top/synthesis/qsys_top.qip
+set_global_assignment -name QIP_FILE platform/clkctrl/synthesis/clkctrl.qip
+set_global_assignment -name SDC_FILE top.sdc
+set_global_assignment -name VERILOG_FILE top.v
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

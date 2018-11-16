@@ -1,0 +1,1312 @@
+TimeQuest Timing Analyzer report for Eth_max10
+Thu Aug 02 16:04:08 2018
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow 1200mV 85C Model Fmax Summary
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Metastability Summary
+ 13. Slow 1200mV 0C Model Fmax Summary
+ 14. Slow 1200mV 0C Model Setup Summary
+ 15. Slow 1200mV 0C Model Hold Summary
+ 16. Slow 1200mV 0C Model Recovery Summary
+ 17. Slow 1200mV 0C Model Removal Summary
+ 18. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 19. Slow 1200mV 0C Model Metastability Summary
+ 20. Fast 1200mV 0C Model Setup Summary
+ 21. Fast 1200mV 0C Model Hold Summary
+ 22. Fast 1200mV 0C Model Recovery Summary
+ 23. Fast 1200mV 0C Model Removal Summary
+ 24. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 25. Fast 1200mV 0C Model Metastability Summary
+ 26. Multicorner Timing Analysis Summary
+ 27. Board Trace Model Assignments
+ 28. Input Transition Times
+ 29. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 30. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 31. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 32. Setup Transfers
+ 33. Hold Transfers
+ 34. Recovery Transfers
+ 35. Removal Transfers
+ 36. Report TCCS
+ 37. Report RSKM
+ 38. Unconstrained Paths Summary
+ 39. Clock Status Summary
+ 40. Unconstrained Input Ports
+ 41. Unconstrained Output Ports
+ 42. Unconstrained Input Ports
+ 43. Unconstrained Output Ports
+ 44. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                               ;
++-----------------------+---------------------------------------------------------+
+; Quartus Prime Version ; Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
+; Timing Analyzer       ; TimeQuest                                               ;
+; Revision Name         ; Eth_max10                                               ;
+; Device Family         ; MAX 10                                                  ;
+; Device Name           ; 10M50DAF484C6GES                                        ;
+; Timing Models         ; Preliminary                                             ;
+; Delay Model           ; Combined                                                ;
+; Rise/Fall Delays      ; Enabled                                                 ;
++-----------------------+---------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.49        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;  49.2%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; SDC File List                                                                                                  ;
++----------------------------------------------------------------------------+--------+--------------------------+
+; SDC File Path                                                              ; Status ; Read at                  ;
++----------------------------------------------------------------------------+--------+--------------------------+
+; platform/qsys_top/synthesis/submodules/altera_reset_controller.sdc         ; OK     ; Thu Aug 02 16:03:52 2018 ;
+; platform/qsys_top/synthesis/submodules/altera_eth_tse_mac.sdc              ; OK     ; Thu Aug 02 16:03:53 2018 ;
+; platform/qsys_top/synthesis/submodules/altera_avalon_st_jtag_interface.sdc ; OK     ; Thu Aug 02 16:03:53 2018 ;
+; platform/qsys_top/synthesis/submodules/crc32.sdc                           ; OK     ; Thu Aug 02 16:03:53 2018 ;
+; top.sdc                                                                    ; OK     ; Thu Aug 02 16:03:53 2018 ;
++----------------------------------------------------------------------------+--------+--------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                                                                                            ;
++---------------------+-----------+---------+-----------+---------+---------+------------+-----------+-------------+-------+--------+-----------+------------+----------+-------------------+-------------------------------------------------------------------------------+-------------------------------------------------------+
+; Clock Name          ; Type      ; Period  ; Frequency ; Rise    ; Fall    ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master            ; Source                                                                        ; Targets                                               ;
++---------------------+-----------+---------+-----------+---------+---------+------------+-----------+-------------+-------+--------+-----------+------------+----------+-------------------+-------------------------------------------------------------------------------+-------------------------------------------------------+
+; altera_reserved_tck ; Base      ; 100.000 ; 10.0 MHz  ; 0.000   ; 50.000  ;            ;           ;             ;       ;        ;           ;            ;          ;                   ;                                                                               ; { altera_reserved_tck }                               ;
+; clk_50_max10        ; Base      ; 20.000  ; 50.0 MHz  ; 0.000   ; 10.000  ;            ;           ;             ;       ;        ;           ;            ;          ;                   ;                                                                               ; { clk_50_max10 }                                      ;
+; enet_tx_2p5         ; Generated ; 400.000 ; 2.5 MHz   ; 0.000   ; 200.000 ; 50.00      ; 20        ; 1           ;       ;        ;           ;            ; false    ; clk_50_max10      ; i_pll|altpll_component|auto_generated|pll1|inclk[0]                           ; { i_pll|altpll_component|auto_generated|pll1|clk[2] } ;
+; enet_tx_25          ; Generated ; 40.000  ; 25.0 MHz  ; 0.000   ; 20.000  ; 50.00      ; 2         ; 1           ;       ;        ;           ;            ; false    ; clk_50_max10      ; i_pll|altpll_component|auto_generated|pll1|inclk[0]                           ; { i_pll|altpll_component|auto_generated|pll1|clk[1] } ;
+; enet_tx_125         ; Generated ; 8.000   ; 125.0 MHz ; 0.000   ; 4.000   ; 50.00      ; 2         ; 5           ;       ;        ;           ;            ; false    ; clk_50_max10      ; i_pll|altpll_component|auto_generated|pll1|inclk[0]                           ; { i_pll|altpll_component|auto_generated|pll1|clk[0] } ;
+; enet_tx_125_shift   ; Generated ; 8.000   ; 125.0 MHz ; 0.250   ; 4.250   ; 50.00      ; 2         ; 5           ; 11.3  ;        ;           ;            ; false    ; clk_50_max10      ; i_pll|altpll_component|auto_generated|pll1|inclk[0]                           ; { i_pll|altpll_component|auto_generated|pll1|clk[3] } ;
+; gtx_2p5_clk         ; Generated ; 400.000 ; 2.5 MHz   ; 0.000   ; 200.000 ;            ; 1         ; 1           ;       ;        ;           ;            ; false    ; enet_tx_2p5       ; clkctrl_inst0|altclkctrl_0|clkctrl_altclkctrl_0_sub_component|clkctrl1|outclk ; { enet_gtx_clk }                                      ;
+; gtx_25_clk          ; Generated ; 40.000  ; 25.0 MHz  ; 0.000   ; 20.000  ;            ; 1         ; 1           ;       ;        ;           ;            ; false    ; enet_tx_25        ; clkctrl_inst0|altclkctrl_0|clkctrl_altclkctrl_0_sub_component|clkctrl1|outclk ; { enet_gtx_clk }                                      ;
+; gtx_125_clk         ; Generated ; 8.000   ; 125.0 MHz ; 0.250   ; 4.250   ;            ; 1         ; 1           ;       ;        ;           ;            ; false    ; enet_tx_125_shift ; clkctrl_inst1|altclkctrl_0|clkctrl_altclkctrl_0_sub_component|clkctrl1|outclk ; { enet_gtx_clk }                                      ;
+; rx_clk_2p5          ; Base      ; 400.000 ; 2.5 MHz   ; 100.000 ; 300.000 ;            ;           ;             ;       ;        ;           ;            ;          ;                   ;                                                                               ; { enet_rx_clk }                                       ;
+; rx_clk_25           ; Base      ; 40.000  ; 25.0 MHz  ; 10.000  ; 30.000  ;            ;           ;             ;       ;        ;           ;            ;          ;                   ;                                                                               ; { enet_rx_clk }                                       ;
+; rx_clk_125          ; Base      ; 8.000   ; 125.0 MHz ; 2.000   ; 6.000   ;            ;           ;             ;       ;        ;           ;            ;          ;                   ;                                                                               ; { enet_rx_clk }                                       ;
+; virtual_clk_2p5     ; Virtual   ; 400.000 ; 2.5 MHz   ; 0.000   ; 200.000 ;            ;           ;             ;       ;        ;           ;            ;          ;                   ;                                                                               ; { }                                                   ;
+; virtual_clk_25      ; Virtual   ; 40.000  ; 25.0 MHz  ; 0.000   ; 20.000  ;            ;           ;             ;       ;        ;           ;            ;          ;                   ;                                                                               ; { }                                                   ;
+; virtual_clk_125     ; Virtual   ; 8.000   ; 125.0 MHz ; 0.000   ; 4.000   ;            ;           ;             ;       ;        ;           ;            ;          ;                   ;                                                                               ; { }                                                   ;
++---------------------+-----------+---------+-----------+---------+---------+------------+-----------+-------------+-------+--------+-----------+------------+----------+-------------------+-------------------------------------------------------------------------------+-------------------------------------------------------+
+
+
++-----------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                        ;
++------------+-----------------+---------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name          ; Note ;
++------------+-----------------+---------------------+------+
+; 4.64 MHz   ; 4.64 MHz        ; enet_tx_2p5         ;      ;
+; 46.42 MHz  ; 46.42 MHz       ; enet_tx_25          ;      ;
+; 101.48 MHz ; 101.48 MHz      ; altera_reserved_tck ;      ;
+; 126.29 MHz ; 126.29 MHz      ; enet_tx_125         ;      ;
+; 167.59 MHz ; 167.59 MHz      ; rx_clk_125          ;      ;
+; 167.59 MHz ; 167.59 MHz      ; rx_clk_25           ;      ;
+; 167.59 MHz ; 167.59 MHz      ; rx_clk_2p5          ;      ;
+; 302.21 MHz ; 302.21 MHz      ; clk_50_max10        ;      ;
++------------+-----------------+---------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++----------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary          ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; enet_tx_125         ; 0.082  ; 0.000         ;
+; gtx_125_clk         ; 0.097  ; 0.000         ;
+; rx_clk_125          ; 0.341  ; 0.000         ;
+; rx_clk_25           ; 0.341  ; 0.000         ;
+; rx_clk_2p5          ; 0.341  ; 0.000         ;
+; gtx_2p5_clk         ; 0.808  ; 0.000         ;
+; gtx_25_clk          ; 0.869  ; 0.000         ;
+; enet_tx_25          ; 3.230  ; 0.000         ;
+; enet_tx_2p5         ; 3.230  ; 0.000         ;
+; clk_50_max10        ; 16.691 ; 0.000         ;
+; altera_reserved_tck ; 45.073 ; 0.000         ;
++---------------------+--------+---------------+
+
+
++-----------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary            ;
++---------------------+---------+---------------+
+; Clock               ; Slack   ; End Point TNS ;
++---------------------+---------+---------------+
+; gtx_125_clk         ; 0.171   ; 0.000         ;
+; altera_reserved_tck ; 0.309   ; 0.000         ;
+; enet_tx_125         ; 0.310   ; 0.000         ;
+; enet_tx_25          ; 0.310   ; 0.000         ;
+; enet_tx_2p5         ; 0.310   ; 0.000         ;
+; rx_clk_125          ; 0.322   ; 0.000         ;
+; rx_clk_25           ; 0.322   ; 0.000         ;
+; rx_clk_2p5          ; 0.322   ; 0.000         ;
+; clk_50_max10        ; 0.325   ; 0.000         ;
+; gtx_25_clk          ; 15.968  ; 0.000         ;
+; gtx_2p5_clk         ; 195.898 ; 0.000         ;
++---------------------+---------+---------------+
+
+
++----------------------------------------------+
+; Slow 1200mV 85C Model Recovery Summary       ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; enet_tx_125         ; 2.224  ; 0.000         ;
+; rx_clk_125          ; 3.898  ; 0.000         ;
+; clk_50_max10        ; 17.496 ; 0.000         ;
+; enet_tx_25          ; 35.359 ; 0.000         ;
+; rx_clk_25           ; 35.898 ; 0.000         ;
+; rx_clk_2p5          ; 96.027 ; 0.000         ;
+; enet_tx_2p5         ; 96.377 ; 0.000         ;
+; altera_reserved_tck ; 96.961 ; 0.000         ;
++---------------------+--------+---------------+
+
+
++---------------------------------------------+
+; Slow 1200mV 85C Model Removal Summary       ;
++---------------------+-------+---------------+
+; Clock               ; Slack ; End Point TNS ;
++---------------------+-------+---------------+
+; enet_tx_125         ; 0.887 ; 0.000         ;
+; altera_reserved_tck ; 1.021 ; 0.000         ;
+; clk_50_max10        ; 1.827 ; 0.000         ;
+; enet_tx_25          ; 2.612 ; 0.000         ;
+; enet_tx_2p5         ; 2.612 ; 0.000         ;
+; rx_clk_125          ; 2.622 ; 0.000         ;
+; rx_clk_25           ; 2.622 ; 0.000         ;
+; rx_clk_2p5          ; 2.622 ; 0.000         ;
++---------------------+-------+---------------+
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++---------------------+---------+-------------------+
+; Clock               ; Slack   ; End Point TNS     ;
++---------------------+---------+-------------------+
+; rx_clk_125          ; 3.502   ; 0.000             ;
+; enet_tx_125         ; 3.604   ; 0.000             ;
+; enet_tx_125_shift   ; 3.701   ; 0.000             ;
+; gtx_125_clk         ; 4.000   ; 0.000             ;
+; clk_50_max10        ; 9.695   ; 0.000             ;
+; rx_clk_25           ; 19.502  ; 0.000             ;
+; enet_tx_25          ; 19.649  ; 0.000             ;
+; gtx_25_clk          ; 36.000  ; 0.000             ;
+; altera_reserved_tck ; 49.578  ; 0.000             ;
+; rx_clk_2p5          ; 199.502 ; 0.000             ;
+; enet_tx_2p5         ; 199.658 ; 0.000             ;
+; gtx_2p5_clk         ; 396.000 ; 0.000             ;
++---------------------+---------+-------------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+
+Number of Synchronizer Chains Found: 410
+Shortest Synchronizer Chain: 2 Registers
+Fraction of Chains for which MTBFs Could Not be Calculated: 0.512
+Worst Case Available Settling Time: 4.374 ns
+
+Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
+  - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 2.4
+Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
+  - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 3.7
+
+
+
++-----------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                         ;
++------------+-----------------+---------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name          ; Note ;
++------------+-----------------+---------------------+------+
+; 5.11 MHz   ; 5.11 MHz        ; enet_tx_2p5         ;      ;
+; 51.08 MHz  ; 51.08 MHz       ; enet_tx_25          ;      ;
+; 111.78 MHz ; 111.78 MHz      ; altera_reserved_tck ;      ;
+; 138.31 MHz ; 138.31 MHz      ; enet_tx_125         ;      ;
+; 183.62 MHz ; 183.62 MHz      ; rx_clk_125          ;      ;
+; 183.62 MHz ; 183.62 MHz      ; rx_clk_25           ;      ;
+; 183.62 MHz ; 183.62 MHz      ; rx_clk_2p5          ;      ;
+; 328.73 MHz ; 328.73 MHz      ; clk_50_max10        ;      ;
++------------+-----------------+---------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++----------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary           ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; gtx_125_clk         ; 0.200  ; 0.000         ;
+; rx_clk_125          ; 0.404  ; 0.000         ;
+; rx_clk_25           ; 0.404  ; 0.000         ;
+; rx_clk_2p5          ; 0.404  ; 0.000         ;
+; enet_tx_125         ; 0.770  ; 0.000         ;
+; gtx_2p5_clk         ; 0.848  ; 0.000         ;
+; gtx_25_clk          ; 0.902  ; 0.000         ;
+; enet_tx_25          ; 3.574  ; 0.000         ;
+; enet_tx_2p5         ; 3.574  ; 0.000         ;
+; clk_50_max10        ; 16.958 ; 0.000         ;
+; altera_reserved_tck ; 45.527 ; 0.000         ;
++---------------------+--------+---------------+
+
+
++-----------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary             ;
++---------------------+---------+---------------+
+; Clock               ; Slack   ; End Point TNS ;
++---------------------+---------+---------------+
+; gtx_125_clk         ; 0.203   ; 0.000         ;
+; altera_reserved_tck ; 0.280   ; 0.000         ;
+; enet_tx_125         ; 0.281   ; 0.000         ;
+; enet_tx_25          ; 0.281   ; 0.000         ;
+; enet_tx_2p5         ; 0.281   ; 0.000         ;
+; rx_clk_125          ; 0.294   ; 0.000         ;
+; rx_clk_25           ; 0.294   ; 0.000         ;
+; rx_clk_2p5          ; 0.294   ; 0.000         ;
+; clk_50_max10        ; 0.295   ; 0.000         ;
+; gtx_25_clk          ; 16.047  ; 0.000         ;
+; gtx_2p5_clk         ; 195.983 ; 0.000         ;
++---------------------+---------+---------------+
+
+
++----------------------------------------------+
+; Slow 1200mV 0C Model Recovery Summary        ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; enet_tx_125         ; 2.794  ; 0.000         ;
+; rx_clk_125          ; 4.265  ; 0.000         ;
+; clk_50_max10        ; 17.695 ; 0.000         ;
+; enet_tx_25          ; 35.835 ; 0.000         ;
+; rx_clk_25           ; 36.265 ; 0.000         ;
+; rx_clk_2p5          ; 96.406 ; 0.000         ;
+; enet_tx_2p5         ; 96.729 ; 0.000         ;
+; altera_reserved_tck ; 97.254 ; 0.000         ;
++---------------------+--------+---------------+
+
+
++---------------------------------------------+
+; Slow 1200mV 0C Model Removal Summary        ;
++---------------------+-------+---------------+
+; Clock               ; Slack ; End Point TNS ;
++---------------------+-------+---------------+
+; enet_tx_125         ; 0.823 ; 0.000         ;
+; altera_reserved_tck ; 0.947 ; 0.000         ;
+; clk_50_max10        ; 1.667 ; 0.000         ;
+; enet_tx_25          ; 2.386 ; 0.000         ;
+; enet_tx_2p5         ; 2.386 ; 0.000         ;
+; rx_clk_125          ; 2.391 ; 0.000         ;
+; rx_clk_25           ; 2.391 ; 0.000         ;
+; rx_clk_2p5          ; 2.391 ; 0.000         ;
++---------------------+-------+---------------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++---------------------+---------+------------------+
+; Clock               ; Slack   ; End Point TNS    ;
++---------------------+---------+------------------+
+; rx_clk_125          ; 3.522   ; 0.000            ;
+; enet_tx_125         ; 3.647   ; 0.000            ;
+; enet_tx_125_shift   ; 3.760   ; 0.000            ;
+; gtx_125_clk         ; 4.000   ; 0.000            ;
+; clk_50_max10        ; 9.692   ; 0.000            ;
+; rx_clk_25           ; 19.522  ; 0.000            ;
+; enet_tx_25          ; 19.686  ; 0.000            ;
+; gtx_25_clk          ; 36.000  ; 0.000            ;
+; altera_reserved_tck ; 49.602  ; 0.000            ;
+; rx_clk_2p5          ; 199.522 ; 0.000            ;
+; enet_tx_2p5         ; 199.694 ; 0.000            ;
+; gtx_2p5_clk         ; 396.000 ; 0.000            ;
++---------------------+---------+------------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+
+Number of Synchronizer Chains Found: 410
+Shortest Synchronizer Chain: 2 Registers
+Fraction of Chains for which MTBFs Could Not be Calculated: 0.512
+Worst Case Available Settling Time: 4.712 ns
+
+Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
+  - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 2.4
+Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
+  - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 3.7
+
+
+
++----------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary           ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; gtx_125_clk         ; 0.553  ; 0.000         ;
+; rx_clk_125          ; 0.707  ; 0.000         ;
+; rx_clk_25           ; 0.707  ; 0.000         ;
+; rx_clk_2p5          ; 0.707  ; 0.000         ;
+; gtx_2p5_clk         ; 0.786  ; 0.000         ;
+; gtx_25_clk          ; 0.816  ; 0.000         ;
+; enet_tx_125         ; 4.093  ; 0.000         ;
+; enet_tx_25          ; 5.137  ; 0.000         ;
+; enet_tx_2p5         ; 5.137  ; 0.000         ;
+; clk_50_max10        ; 18.451 ; 0.000         ;
+; altera_reserved_tck ; 47.859 ; 0.000         ;
++---------------------+--------+---------------+
+
+
++-----------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary             ;
++---------------------+---------+---------------+
+; Clock               ; Slack   ; End Point TNS ;
++---------------------+---------+---------------+
+; altera_reserved_tck ; 0.141   ; 0.000         ;
+; enet_tx_125         ; 0.143   ; 0.000         ;
+; enet_tx_25          ; 0.143   ; 0.000         ;
+; enet_tx_2p5         ; 0.143   ; 0.000         ;
+; rx_clk_125          ; 0.148   ; 0.000         ;
+; rx_clk_25           ; 0.148   ; 0.000         ;
+; rx_clk_2p5          ; 0.148   ; 0.000         ;
+; clk_50_max10        ; 0.149   ; 0.000         ;
+; gtx_125_clk         ; 0.533   ; 0.000         ;
+; gtx_25_clk          ; 16.616  ; 0.000         ;
+; gtx_2p5_clk         ; 196.574 ; 0.000         ;
++---------------------+---------+---------------+
+
+
++----------------------------------------------+
+; Fast 1200mV 0C Model Recovery Summary        ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; enet_tx_125         ; 4.960  ; 0.000         ;
+; rx_clk_125          ; 5.873  ; 0.000         ;
+; clk_50_max10        ; 18.710 ; 0.000         ;
+; enet_tx_25          ; 37.653 ; 0.000         ;
+; rx_clk_25           ; 37.873 ; 0.000         ;
+; rx_clk_2p5          ; 97.899 ; 0.000         ;
+; enet_tx_2p5         ; 98.052 ; 0.000         ;
+; altera_reserved_tck ; 98.459 ; 0.000         ;
++---------------------+--------+---------------+
+
+
++---------------------------------------------+
+; Fast 1200mV 0C Model Removal Summary        ;
++---------------------+-------+---------------+
+; Clock               ; Slack ; End Point TNS ;
++---------------------+-------+---------------+
+; enet_tx_125         ; 0.410 ; 0.000         ;
+; altera_reserved_tck ; 0.467 ; 0.000         ;
+; clk_50_max10        ; 0.851 ; 0.000         ;
+; enet_tx_25          ; 1.369 ; 0.000         ;
+; enet_tx_2p5         ; 1.369 ; 0.000         ;
+; rx_clk_125          ; 1.370 ; 0.000         ;
+; rx_clk_25           ; 1.370 ; 0.000         ;
+; rx_clk_2p5          ; 1.370 ; 0.000         ;
++---------------------+-------+---------------+
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++---------------------+---------+------------------+
+; Clock               ; Slack   ; End Point TNS    ;
++---------------------+---------+------------------+
+; rx_clk_125          ; 3.411   ; 0.000            ;
+; enet_tx_125         ; 3.663   ; 0.000            ;
+; enet_tx_125_shift   ; 3.676   ; 0.000            ;
+; gtx_125_clk         ; 4.000   ; 0.000            ;
+; clk_50_max10        ; 9.762   ; 0.000            ;
+; rx_clk_25           ; 19.411  ; 0.000            ;
+; enet_tx_25          ; 19.687  ; 0.000            ;
+; gtx_25_clk          ; 36.000  ; 0.000            ;
+; altera_reserved_tck ; 49.420  ; 0.000            ;
+; rx_clk_2p5          ; 199.411 ; 0.000            ;
+; enet_tx_2p5         ; 199.681 ; 0.000            ;
+; gtx_2p5_clk         ; 396.000 ; 0.000            ;
++---------------------+---------+------------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+
+Number of Synchronizer Chains Found: 410
+Shortest Synchronizer Chain: 2 Registers
+Fraction of Chains for which MTBFs Could Not be Calculated: 0.512
+Worst Case Available Settling Time: 6.057 ns
+
+Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
+  - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 2.4
+Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
+  - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 3.7
+
+
+
++------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                ;
++----------------------+--------+---------+----------+---------+---------------------+
+; Clock                ; Setup  ; Hold    ; Recovery ; Removal ; Minimum Pulse Width ;
++----------------------+--------+---------+----------+---------+---------------------+
+; Worst-case Slack     ; 0.082  ; 0.141   ; 2.224    ; 0.410   ; 3.411               ;
+;  altera_reserved_tck ; 45.073 ; 0.141   ; 96.961   ; 0.467   ; 49.420              ;
+;  clk_50_max10        ; 16.691 ; 0.149   ; 17.496   ; 0.851   ; 9.692               ;
+;  enet_tx_125         ; 0.082  ; 0.143   ; 2.224    ; 0.410   ; 3.604               ;
+;  enet_tx_125_shift   ; N/A    ; N/A     ; N/A      ; N/A     ; 3.676               ;
+;  enet_tx_25          ; 3.230  ; 0.143   ; 35.359   ; 1.369   ; 19.649              ;
+;  enet_tx_2p5         ; 3.230  ; 0.143   ; 96.377   ; 1.369   ; 199.658             ;
+;  gtx_125_clk         ; 0.097  ; 0.171   ; N/A      ; N/A     ; 4.000               ;
+;  gtx_25_clk          ; 0.816  ; 15.968  ; N/A      ; N/A     ; 36.000              ;
+;  gtx_2p5_clk         ; 0.786  ; 195.898 ; N/A      ; N/A     ; 396.000             ;
+;  rx_clk_125          ; 0.341  ; 0.148   ; 3.898    ; 1.370   ; 3.411               ;
+;  rx_clk_25           ; 0.341  ; 0.148   ; 35.898   ; 1.370   ; 19.411              ;
+;  rx_clk_2p5          ; 0.341  ; 0.148   ; 96.027   ; 1.370   ; 199.411             ;
+; Design-wide TNS      ; 0.0    ; 0.0     ; 0.0      ; 0.0     ; 0.0                 ;
+;  altera_reserved_tck ; 0.000  ; 0.000   ; 0.000    ; 0.000   ; 0.000               ;
+;  clk_50_max10        ; 0.000  ; 0.000   ; 0.000    ; 0.000   ; 0.000               ;
+;  enet_tx_125         ; 0.000  ; 0.000   ; 0.000    ; 0.000   ; 0.000               ;
+;  enet_tx_125_shift   ; N/A    ; N/A     ; N/A      ; N/A     ; 0.000               ;
+;  enet_tx_25          ; 0.000  ; 0.000   ; 0.000    ; 0.000   ; 0.000               ;
+;  enet_tx_2p5         ; 0.000  ; 0.000   ; 0.000    ; 0.000   ; 0.000               ;
+;  gtx_125_clk         ; 0.000  ; 0.000   ; N/A      ; N/A     ; 0.000               ;
+;  gtx_25_clk          ; 0.000  ; 0.000   ; N/A      ; N/A     ; 0.000               ;
+;  gtx_2p5_clk         ; 0.000  ; 0.000   ; N/A      ; N/A     ; 0.000               ;
+;  rx_clk_125          ; 0.000  ; 0.000   ; 0.000    ; 0.000   ; 0.000               ;
+;  rx_clk_25           ; 0.000  ; 0.000   ; 0.000    ; 0.000   ; 0.000               ;
+;  rx_clk_2p5          ; 0.000  ; 0.000   ; 0.000    ; 0.000   ; 0.000               ;
++----------------------+--------+---------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                          ;
++---------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin                 ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; user_led[0]         ; 1.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; user_led[1]         ; 1.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; user_led[2]         ; 1.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; user_led[3]         ; 1.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; user_led[4]         ; 1.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; enet_mdc            ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; enet_resetn         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; enet_gtx_clk        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; enet_tx_d[0]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; enet_tx_d[1]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; enet_tx_d[2]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; enet_tx_d[3]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; enet_tx_en          ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; enet_mdio           ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; altera_reserved_tdo ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++---------------------------------------------------------------------------------+
+; Input Transition Times                                                          ;
++---------------------+-----------------------+-----------------+-----------------+
+; Pin                 ; I/O Standard          ; 10-90 Rise Time ; 90-10 Fall Time ;
++---------------------+-----------------------+-----------------+-----------------+
+; user_pb[1]          ; 1.5 V                 ; 1200 ps         ; 1200 ps         ;
+; user_pb[2]          ; 1.5 V                 ; 1200 ps         ; 1200 ps         ;
+; user_pb[3]          ; 1.5 V                 ; 1200 ps         ; 1200 ps         ;
+; enet_mdio           ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; enet_rx_dv          ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; enet_rx_d[3]        ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; enet_rx_d[2]        ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; enet_rx_d[1]        ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; enet_rx_d[0]        ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; clk_50_max10        ; LVDS                  ; 2000 ps         ; 2000 ps         ;
+; user_pb[0]          ; 1.5 V                 ; 1200 ps         ; 1200 ps         ;
+; fpga_resetn         ; 3.3-V LVCMOS          ; 2640 ps         ; 2640 ps         ;
+; enet_rx_clk         ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; altera_reserved_tms ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
+; altera_reserved_tck ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
+; altera_reserved_tdi ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_CONFIG_SEL~ ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_nCONFIG~    ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_nSTATUS~    ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_CONF_DONE~  ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
+; clk_50_max10(n)     ; LVDS                  ; 2000 ps         ; 2000 ps         ;
++---------------------+-----------------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ;
++---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin                 ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; user_led[0]         ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.37 V                       ; 4.6e-09 V                    ; 1.4 V               ; -0.0114 V           ; 0.064 V                              ; 0.017 V                              ; 4.42e-10 s                  ; 4.34e-10 s                  ; Yes                        ; Yes                        ; 1.37 V                      ; 4.6e-09 V                   ; 1.4 V              ; -0.0114 V          ; 0.064 V                             ; 0.017 V                             ; 4.42e-10 s                 ; 4.34e-10 s                 ; Yes                       ; Yes                       ;
+; user_led[1]         ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.37 V                       ; 4.61e-09 V                   ; 1.4 V               ; -0.0112 V           ; 0.065 V                              ; 0.046 V                              ; 4.42e-10 s                  ; 4.34e-10 s                  ; Yes                        ; Yes                        ; 1.37 V                      ; 4.61e-09 V                  ; 1.4 V              ; -0.0112 V          ; 0.065 V                             ; 0.046 V                             ; 4.42e-10 s                 ; 4.34e-10 s                 ; Yes                       ; Yes                       ;
+; user_led[2]         ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.37 V                       ; 4.6e-09 V                    ; 1.4 V               ; -0.0114 V           ; 0.064 V                              ; 0.017 V                              ; 4.42e-10 s                  ; 4.34e-10 s                  ; Yes                        ; Yes                        ; 1.37 V                      ; 4.6e-09 V                   ; 1.4 V              ; -0.0114 V          ; 0.064 V                             ; 0.017 V                             ; 4.42e-10 s                 ; 4.34e-10 s                 ; Yes                       ; Yes                       ;
+; user_led[3]         ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.37 V                       ; 4.6e-09 V                    ; 1.4 V               ; -0.0114 V           ; 0.064 V                              ; 0.017 V                              ; 4.42e-10 s                  ; 4.34e-10 s                  ; Yes                        ; Yes                        ; 1.37 V                      ; 4.6e-09 V                   ; 1.4 V              ; -0.0114 V          ; 0.064 V                             ; 0.017 V                             ; 4.42e-10 s                 ; 4.34e-10 s                 ; Yes                       ; Yes                       ;
+; user_led[4]         ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.37 V                       ; 4.61e-09 V                   ; 1.4 V               ; -0.0112 V           ; 0.065 V                              ; 0.046 V                              ; 4.42e-10 s                  ; 4.34e-10 s                  ; Yes                        ; Yes                        ; 1.37 V                      ; 4.61e-09 V                  ; 1.4 V              ; -0.0112 V          ; 0.065 V                             ; 0.046 V                             ; 4.42e-10 s                 ; 4.34e-10 s                 ; Yes                       ; Yes                       ;
+; enet_mdc            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0607 V           ; 0.271 V                              ; 0.095 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0607 V          ; 0.271 V                             ; 0.095 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; enet_resetn         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.41 V              ; -0.055 V            ; 0.153 V                              ; 0.113 V                              ; 4.49e-10 s                  ; 4.13e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.41 V             ; -0.055 V           ; 0.153 V                             ; 0.113 V                             ; 4.49e-10 s                 ; 4.13e-10 s                 ; No                        ; Yes                       ;
+; enet_gtx_clk        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0619 V           ; 0.272 V                              ; 0.096 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0619 V          ; 0.272 V                             ; 0.096 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; enet_tx_d[0]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0607 V           ; 0.271 V                              ; 0.095 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0607 V          ; 0.271 V                             ; 0.095 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; enet_tx_d[1]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0607 V           ; 0.271 V                              ; 0.095 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0607 V          ; 0.271 V                             ; 0.095 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; enet_tx_d[2]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0619 V           ; 0.272 V                              ; 0.096 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0619 V          ; 0.272 V                             ; 0.096 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; enet_tx_d[3]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0607 V           ; 0.271 V                              ; 0.095 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0607 V          ; 0.271 V                             ; 0.095 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; enet_tx_en          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0619 V           ; 0.272 V                              ; 0.096 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0619 V          ; 0.272 V                             ; 0.096 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; enet_mdio           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0619 V           ; 0.272 V                              ; 0.096 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0619 V          ; 0.272 V                             ; 0.096 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; altera_reserved_tdo ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.97e-08 V                   ; 2.4 V               ; -0.023 V            ; 0.201 V                              ; 0.081 V                              ; 4.59e-10 s                  ; 5.51e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.97e-08 V                  ; 2.4 V              ; -0.023 V           ; 0.201 V                             ; 0.081 V                             ; 4.59e-10 s                 ; 5.51e-10 s                 ; No                        ; Yes                       ;
++---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ;
++---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin                 ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; user_led[0]         ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.37 V                       ; 8.23e-07 V                   ; 1.39 V              ; -0.0078 V           ; 0.038 V                              ; 0.03 V                               ; 4.88e-10 s                  ; 5.36e-10 s                  ; Yes                        ; Yes                        ; 1.37 V                      ; 8.23e-07 V                  ; 1.39 V             ; -0.0078 V          ; 0.038 V                             ; 0.03 V                              ; 4.88e-10 s                 ; 5.36e-10 s                 ; Yes                       ; Yes                       ;
+; user_led[1]         ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.37 V                       ; 8.24e-07 V                   ; 1.39 V              ; -0.00775 V          ; 0.038 V                              ; 0.03 V                               ; 4.88e-10 s                  ; 5.36e-10 s                  ; Yes                        ; Yes                        ; 1.37 V                      ; 8.24e-07 V                  ; 1.39 V             ; -0.00775 V         ; 0.038 V                             ; 0.03 V                              ; 4.88e-10 s                 ; 5.36e-10 s                 ; Yes                       ; Yes                       ;
+; user_led[2]         ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.37 V                       ; 8.23e-07 V                   ; 1.39 V              ; -0.0078 V           ; 0.038 V                              ; 0.03 V                               ; 4.88e-10 s                  ; 5.36e-10 s                  ; Yes                        ; Yes                        ; 1.37 V                      ; 8.23e-07 V                  ; 1.39 V             ; -0.0078 V          ; 0.038 V                             ; 0.03 V                              ; 4.88e-10 s                 ; 5.36e-10 s                 ; Yes                       ; Yes                       ;
+; user_led[3]         ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.37 V                       ; 8.23e-07 V                   ; 1.39 V              ; -0.0078 V           ; 0.038 V                              ; 0.03 V                               ; 4.88e-10 s                  ; 5.36e-10 s                  ; Yes                        ; Yes                        ; 1.37 V                      ; 8.23e-07 V                  ; 1.39 V             ; -0.0078 V          ; 0.038 V                             ; 0.03 V                              ; 4.88e-10 s                 ; 5.36e-10 s                 ; Yes                       ; Yes                       ;
+; user_led[4]         ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.37 V                       ; 8.24e-07 V                   ; 1.39 V              ; -0.00775 V          ; 0.038 V                              ; 0.03 V                               ; 4.88e-10 s                  ; 5.36e-10 s                  ; Yes                        ; Yes                        ; 1.37 V                      ; 8.24e-07 V                  ; 1.39 V             ; -0.00775 V         ; 0.038 V                             ; 0.03 V                              ; 4.88e-10 s                 ; 5.36e-10 s                 ; Yes                       ; Yes                       ;
+; enet_mdc            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.041 V            ; 0.145 V                              ; 0.14 V                               ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.041 V           ; 0.145 V                             ; 0.14 V                              ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; enet_resetn         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.036 V            ; 0.183 V                              ; 0.07 V                               ; 4.76e-10 s                  ; 4.7e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.036 V           ; 0.183 V                             ; 0.07 V                              ; 4.76e-10 s                 ; 4.7e-10 s                  ; Yes                       ; Yes                       ;
+; enet_gtx_clk        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.0389 V           ; 0.145 V                              ; 0.139 V                              ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.0389 V          ; 0.145 V                             ; 0.139 V                             ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; enet_tx_d[0]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.041 V            ; 0.145 V                              ; 0.14 V                               ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.041 V           ; 0.145 V                             ; 0.14 V                              ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; enet_tx_d[1]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.041 V            ; 0.145 V                              ; 0.14 V                               ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.041 V           ; 0.145 V                             ; 0.14 V                              ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; enet_tx_d[2]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.0389 V           ; 0.145 V                              ; 0.139 V                              ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.0389 V          ; 0.145 V                             ; 0.139 V                             ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; enet_tx_d[3]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.041 V            ; 0.145 V                              ; 0.14 V                               ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.041 V           ; 0.145 V                             ; 0.14 V                              ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; enet_tx_en          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.0389 V           ; 0.145 V                              ; 0.139 V                              ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.0389 V          ; 0.145 V                             ; 0.139 V                             ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; enet_mdio           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.0389 V           ; 0.145 V                              ; 0.139 V                              ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.0389 V          ; 0.145 V                             ; 0.139 V                             ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; altera_reserved_tdo ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.04e-06 V                   ; 2.37 V              ; -0.0108 V           ; 0.13 V                               ; 0.066 V                              ; 6.32e-10 s                  ; 6.45e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.04e-06 V                  ; 2.37 V             ; -0.0108 V          ; 0.13 V                              ; 0.066 V                             ; 6.32e-10 s                 ; 6.45e-10 s                 ; No                        ; Yes                       ;
++---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ;
++---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin                 ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; user_led[0]         ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.57 V                       ; 2.35e-08 V                   ; 1.63 V              ; -0.0475 V           ; 0.117 V                              ; 0.092 V                              ; 2.7e-10 s                   ; 2.7e-10 s                   ; Yes                        ; Yes                        ; 1.57 V                      ; 2.35e-08 V                  ; 1.63 V             ; -0.0475 V          ; 0.117 V                             ; 0.092 V                             ; 2.7e-10 s                  ; 2.7e-10 s                  ; Yes                       ; Yes                       ;
+; user_led[1]         ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.57 V                       ; 2.34e-08 V                   ; 1.63 V              ; -0.0474 V           ; 0.117 V                              ; 0.092 V                              ; 2.7e-10 s                   ; 2.7e-10 s                   ; Yes                        ; Yes                        ; 1.57 V                      ; 2.34e-08 V                  ; 1.63 V             ; -0.0474 V          ; 0.117 V                             ; 0.092 V                             ; 2.7e-10 s                  ; 2.7e-10 s                  ; Yes                       ; Yes                       ;
+; user_led[2]         ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.57 V                       ; 2.35e-08 V                   ; 1.63 V              ; -0.0475 V           ; 0.117 V                              ; 0.092 V                              ; 2.7e-10 s                   ; 2.7e-10 s                   ; Yes                        ; Yes                        ; 1.57 V                      ; 2.35e-08 V                  ; 1.63 V             ; -0.0475 V          ; 0.117 V                             ; 0.092 V                             ; 2.7e-10 s                  ; 2.7e-10 s                  ; Yes                       ; Yes                       ;
+; user_led[3]         ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.57 V                       ; 2.35e-08 V                   ; 1.63 V              ; -0.0475 V           ; 0.117 V                              ; 0.092 V                              ; 2.7e-10 s                   ; 2.7e-10 s                   ; Yes                        ; Yes                        ; 1.57 V                      ; 2.35e-08 V                  ; 1.63 V             ; -0.0475 V          ; 0.117 V                             ; 0.092 V                             ; 2.7e-10 s                  ; 2.7e-10 s                  ; Yes                       ; Yes                       ;
+; user_led[4]         ; 1.5 V        ; 0 s                 ; 0 s                 ; 1.57 V                       ; 2.34e-08 V                   ; 1.63 V              ; -0.0474 V           ; 0.117 V                              ; 0.092 V                              ; 2.7e-10 s                   ; 2.7e-10 s                   ; Yes                        ; Yes                        ; 1.57 V                      ; 2.34e-08 V                  ; 1.63 V             ; -0.0474 V          ; 0.117 V                             ; 0.092 V                             ; 2.7e-10 s                  ; 2.7e-10 s                  ; Yes                       ; Yes                       ;
+; enet_mdc            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; enet_resetn         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.77 V              ; -0.0486 V           ; 0.285 V                              ; 0.06 V                               ; 2.8e-10 s                   ; 3.04e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.77 V             ; -0.0486 V          ; 0.285 V                             ; 0.06 V                              ; 2.8e-10 s                  ; 3.04e-10 s                 ; No                        ; Yes                       ;
+; enet_gtx_clk        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; enet_tx_d[0]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; enet_tx_d[1]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; enet_tx_d[2]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; enet_tx_d[3]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; enet_tx_en          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; enet_mdio           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; altera_reserved_tdo ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 1.68e-07 V                   ; 2.73 V              ; -0.0395 V           ; 0.361 V                              ; 0.109 V                              ; 3.1e-10 s                   ; 4.41e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 1.68e-07 V                  ; 2.73 V             ; -0.0395 V          ; 0.361 V                             ; 0.109 V                             ; 3.1e-10 s                  ; 4.41e-10 s                 ; No                        ; Yes                       ;
++---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                               ;
++---------------------+---------------------+------------+------------+------------+------------+
+; From Clock          ; To Clock            ; RR Paths   ; FR Paths   ; RF Paths   ; FF Paths   ;
++---------------------+---------------------+------------+------------+------------+------------+
+; altera_reserved_tck ; altera_reserved_tck ; 6221       ; 0          ; 53         ; 0          ;
+; enet_tx_125         ; altera_reserved_tck ; false path ; 0          ; 0          ; 0          ;
+; clk_50_max10        ; clk_50_max10        ; 1167       ; 0          ; 0          ; 0          ;
+; enet_tx_2p5         ; enet_tx_2p5         ; 34908      ; 0          ; 0          ; 0          ;
+; enet_tx_25          ; enet_tx_2p5         ; false path ; 0          ; 0          ; 0          ;
+; enet_tx_125         ; enet_tx_2p5         ; false path ; 0          ; 0          ; 0          ;
+; rx_clk_2p5          ; enet_tx_2p5         ; 45         ; 0          ; 0          ; 0          ;
+; rx_clk_25           ; enet_tx_2p5         ; false path ; 0          ; 0          ; 0          ;
+; rx_clk_125          ; enet_tx_2p5         ; false path ; 0          ; 0          ; 0          ;
+; enet_tx_2p5         ; enet_tx_25          ; false path ; 0          ; 0          ; 0          ;
+; enet_tx_25          ; enet_tx_25          ; 34908      ; 0          ; 0          ; 0          ;
+; enet_tx_125         ; enet_tx_25          ; false path ; 0          ; 0          ; 0          ;
+; rx_clk_2p5          ; enet_tx_25          ; false path ; 0          ; 0          ; 0          ;
+; rx_clk_25           ; enet_tx_25          ; 45         ; 0          ; 0          ; 0          ;
+; rx_clk_125          ; enet_tx_25          ; false path ; 0          ; 0          ; 0          ;
+; altera_reserved_tck ; enet_tx_125         ; false path ; 0          ; 0          ; 0          ;
+; enet_tx_2p5         ; enet_tx_125         ; false path ; 0          ; 0          ; 0          ;
+; enet_tx_25          ; enet_tx_125         ; false path ; 0          ; 0          ; 0          ;
+; enet_tx_125         ; enet_tx_125         ; 148467     ; 0          ; 0          ; 0          ;
+; rx_clk_2p5          ; enet_tx_125         ; false path ; 0          ; 0          ; 0          ;
+; rx_clk_25           ; enet_tx_125         ; false path ; 0          ; 0          ; 0          ;
+; rx_clk_125          ; enet_tx_125         ; 287        ; 0          ; 0          ; 0          ;
+; enet_tx_2p5         ; gtx_2p5_clk         ; 5          ; false path ; false path ; 5          ;
+; enet_tx_25          ; gtx_2p5_clk         ; false path ; false path ; false path ; false path ;
+; enet_tx_125         ; gtx_2p5_clk         ; false path ; false path ; false path ; false path ;
+; enet_tx_2p5         ; gtx_25_clk          ; false path ; false path ; false path ; false path ;
+; enet_tx_25          ; gtx_25_clk          ; 5          ; false path ; false path ; 5          ;
+; enet_tx_125         ; gtx_25_clk          ; false path ; false path ; false path ; false path ;
+; enet_tx_2p5         ; gtx_125_clk         ; false path ; false path ; false path ; false path ;
+; enet_tx_25          ; gtx_125_clk         ; false path ; false path ; false path ; false path ;
+; enet_tx_125         ; gtx_125_clk         ; 15         ; false path ; false path ; 5          ;
+; enet_tx_2p5         ; rx_clk_2p5          ; 6          ; 0          ; 0          ; 0          ;
+; enet_tx_25          ; rx_clk_2p5          ; false path ; 0          ; 0          ; 0          ;
+; enet_tx_125         ; rx_clk_2p5          ; false path ; 0          ; 0          ; 0          ;
+; rx_clk_2p5          ; rx_clk_2p5          ; 12860      ; 10         ; 5          ; 0          ;
+; rx_clk_25           ; rx_clk_2p5          ; false path ; false path ; false path ; 0          ;
+; rx_clk_125          ; rx_clk_2p5          ; false path ; false path ; false path ; 0          ;
+; virtual_clk_2p5     ; rx_clk_2p5          ; 5          ; false path ; false path ; 5          ;
+; virtual_clk_25      ; rx_clk_2p5          ; false path ; false path ; false path ; false path ;
+; virtual_clk_125     ; rx_clk_2p5          ; false path ; false path ; false path ; false path ;
+; enet_tx_2p5         ; rx_clk_25           ; false path ; 0          ; 0          ; 0          ;
+; enet_tx_25          ; rx_clk_25           ; 6          ; 0          ; 0          ; 0          ;
+; enet_tx_125         ; rx_clk_25           ; false path ; 0          ; 0          ; 0          ;
+; rx_clk_2p5          ; rx_clk_25           ; false path ; false path ; false path ; 0          ;
+; rx_clk_25           ; rx_clk_25           ; 12860      ; 10         ; 5          ; 0          ;
+; rx_clk_125          ; rx_clk_25           ; false path ; false path ; false path ; 0          ;
+; virtual_clk_2p5     ; rx_clk_25           ; false path ; false path ; false path ; false path ;
+; virtual_clk_25      ; rx_clk_25           ; 5          ; false path ; false path ; 5          ;
+; virtual_clk_125     ; rx_clk_25           ; false path ; false path ; false path ; false path ;
+; enet_tx_2p5         ; rx_clk_125          ; false path ; 0          ; 0          ; 0          ;
+; enet_tx_25          ; rx_clk_125          ; false path ; 0          ; 0          ; 0          ;
+; enet_tx_125         ; rx_clk_125          ; 154        ; 0          ; 0          ; 0          ;
+; rx_clk_2p5          ; rx_clk_125          ; false path ; false path ; false path ; 0          ;
+; rx_clk_25           ; rx_clk_125          ; false path ; false path ; false path ; 0          ;
+; rx_clk_125          ; rx_clk_125          ; 12860      ; 10         ; 5          ; 0          ;
+; virtual_clk_2p5     ; rx_clk_125          ; false path ; false path ; false path ; false path ;
+; virtual_clk_25      ; rx_clk_125          ; false path ; false path ; false path ; false path ;
+; virtual_clk_125     ; rx_clk_125          ; 5          ; false path ; false path ; 5          ;
++---------------------+---------------------+------------+------------+------------+------------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                ;
++---------------------+---------------------+------------+------------+------------+------------+
+; From Clock          ; To Clock            ; RR Paths   ; FR Paths   ; RF Paths   ; FF Paths   ;
++---------------------+---------------------+------------+------------+------------+------------+
+; altera_reserved_tck ; altera_reserved_tck ; 6221       ; 0          ; 53         ; 0          ;
+; enet_tx_125         ; altera_reserved_tck ; false path ; 0          ; 0          ; 0          ;
+; clk_50_max10        ; clk_50_max10        ; 1167       ; 0          ; 0          ; 0          ;
+; enet_tx_2p5         ; enet_tx_2p5         ; 34908      ; 0          ; 0          ; 0          ;
+; enet_tx_25          ; enet_tx_2p5         ; false path ; 0          ; 0          ; 0          ;
+; enet_tx_125         ; enet_tx_2p5         ; false path ; 0          ; 0          ; 0          ;
+; rx_clk_2p5          ; enet_tx_2p5         ; 45         ; 0          ; 0          ; 0          ;
+; rx_clk_25           ; enet_tx_2p5         ; false path ; 0          ; 0          ; 0          ;
+; rx_clk_125          ; enet_tx_2p5         ; false path ; 0          ; 0          ; 0          ;
+; enet_tx_2p5         ; enet_tx_25          ; false path ; 0          ; 0          ; 0          ;
+; enet_tx_25          ; enet_tx_25          ; 34908      ; 0          ; 0          ; 0          ;
+; enet_tx_125         ; enet_tx_25          ; false path ; 0          ; 0          ; 0          ;
+; rx_clk_2p5          ; enet_tx_25          ; false path ; 0          ; 0          ; 0          ;
+; rx_clk_25           ; enet_tx_25          ; 45         ; 0          ; 0          ; 0          ;
+; rx_clk_125          ; enet_tx_25          ; false path ; 0          ; 0          ; 0          ;
+; altera_reserved_tck ; enet_tx_125         ; false path ; 0          ; 0          ; 0          ;
+; enet_tx_2p5         ; enet_tx_125         ; false path ; 0          ; 0          ; 0          ;
+; enet_tx_25          ; enet_tx_125         ; false path ; 0          ; 0          ; 0          ;
+; enet_tx_125         ; enet_tx_125         ; 148467     ; 0          ; 0          ; 0          ;
+; rx_clk_2p5          ; enet_tx_125         ; false path ; 0          ; 0          ; 0          ;
+; rx_clk_25           ; enet_tx_125         ; false path ; 0          ; 0          ; 0          ;
+; rx_clk_125          ; enet_tx_125         ; 287        ; 0          ; 0          ; 0          ;
+; enet_tx_2p5         ; gtx_2p5_clk         ; false path ; 5          ; 5          ; false path ;
+; enet_tx_25          ; gtx_2p5_clk         ; false path ; false path ; false path ; false path ;
+; enet_tx_125         ; gtx_2p5_clk         ; false path ; false path ; false path ; false path ;
+; enet_tx_2p5         ; gtx_25_clk          ; false path ; false path ; false path ; false path ;
+; enet_tx_25          ; gtx_25_clk          ; false path ; 5          ; 5          ; false path ;
+; enet_tx_125         ; gtx_25_clk          ; false path ; false path ; false path ; false path ;
+; enet_tx_2p5         ; gtx_125_clk         ; false path ; false path ; false path ; false path ;
+; enet_tx_25          ; gtx_125_clk         ; false path ; false path ; false path ; false path ;
+; enet_tx_125         ; gtx_125_clk         ; false path ; 5          ; 15         ; false path ;
+; enet_tx_2p5         ; rx_clk_2p5          ; 6          ; 0          ; 0          ; 0          ;
+; enet_tx_25          ; rx_clk_2p5          ; false path ; 0          ; 0          ; 0          ;
+; enet_tx_125         ; rx_clk_2p5          ; false path ; 0          ; 0          ; 0          ;
+; rx_clk_2p5          ; rx_clk_2p5          ; 12860      ; 10         ; 5          ; 0          ;
+; rx_clk_25           ; rx_clk_2p5          ; false path ; false path ; false path ; 0          ;
+; rx_clk_125          ; rx_clk_2p5          ; false path ; false path ; false path ; 0          ;
+; virtual_clk_2p5     ; rx_clk_2p5          ; false path ; 5          ; 5          ; false path ;
+; virtual_clk_25      ; rx_clk_2p5          ; false path ; false path ; false path ; false path ;
+; virtual_clk_125     ; rx_clk_2p5          ; false path ; false path ; false path ; false path ;
+; enet_tx_2p5         ; rx_clk_25           ; false path ; 0          ; 0          ; 0          ;
+; enet_tx_25          ; rx_clk_25           ; 6          ; 0          ; 0          ; 0          ;
+; enet_tx_125         ; rx_clk_25           ; false path ; 0          ; 0          ; 0          ;
+; rx_clk_2p5          ; rx_clk_25           ; false path ; false path ; false path ; 0          ;
+; rx_clk_25           ; rx_clk_25           ; 12860      ; 10         ; 5          ; 0          ;
+; rx_clk_125          ; rx_clk_25           ; false path ; false path ; false path ; 0          ;
+; virtual_clk_2p5     ; rx_clk_25           ; false path ; false path ; false path ; false path ;
+; virtual_clk_25      ; rx_clk_25           ; false path ; 5          ; 5          ; false path ;
+; virtual_clk_125     ; rx_clk_25           ; false path ; false path ; false path ; false path ;
+; enet_tx_2p5         ; rx_clk_125          ; false path ; 0          ; 0          ; 0          ;
+; enet_tx_25          ; rx_clk_125          ; false path ; 0          ; 0          ; 0          ;
+; enet_tx_125         ; rx_clk_125          ; 154        ; 0          ; 0          ; 0          ;
+; rx_clk_2p5          ; rx_clk_125          ; false path ; false path ; false path ; 0          ;
+; rx_clk_25           ; rx_clk_125          ; false path ; false path ; false path ; 0          ;
+; rx_clk_125          ; rx_clk_125          ; 12860      ; 10         ; 5          ; 0          ;
+; virtual_clk_2p5     ; rx_clk_125          ; false path ; false path ; false path ; false path ;
+; virtual_clk_25      ; rx_clk_125          ; false path ; false path ; false path ; false path ;
+; virtual_clk_125     ; rx_clk_125          ; false path ; 5          ; 5          ; false path ;
++---------------------+---------------------+------------+------------+------------+------------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------+
+; Recovery Transfers                                                                      ;
++---------------------+---------------------+------------+----------+----------+----------+
+; From Clock          ; To Clock            ; RR Paths   ; FR Paths ; RF Paths ; FF Paths ;
++---------------------+---------------------+------------+----------+----------+----------+
+; altera_reserved_tck ; altera_reserved_tck ; 99         ; 0        ; 0        ; 0        ;
+; enet_tx_125         ; altera_reserved_tck ; false path ; 0        ; 0        ; 0        ;
+; clk_50_max10        ; clk_50_max10        ; 63         ; 0        ; 0        ; 0        ;
+; enet_tx_2p5         ; enet_tx_2p5         ; 1176       ; 0        ; 0        ; 0        ;
+; enet_tx_25          ; enet_tx_2p5         ; false path ; 0        ; 0        ; 0        ;
+; enet_tx_125         ; enet_tx_2p5         ; false path ; 0        ; 0        ; 0        ;
+; enet_tx_2p5         ; enet_tx_25          ; false path ; 0        ; 0        ; 0        ;
+; enet_tx_25          ; enet_tx_25          ; 1176       ; 0        ; 0        ; 0        ;
+; enet_tx_125         ; enet_tx_25          ; false path ; 0        ; 0        ; 0        ;
+; altera_reserved_tck ; enet_tx_125         ; false path ; 0        ; 0        ; 0        ;
+; clk_50_max10        ; enet_tx_125         ; 6          ; 0        ; 0        ; 0        ;
+; enet_tx_2p5         ; enet_tx_125         ; false path ; 0        ; 0        ; 0        ;
+; enet_tx_25          ; enet_tx_125         ; false path ; 0        ; 0        ; 0        ;
+; enet_tx_125         ; enet_tx_125         ; 4076       ; 0        ; 0        ; 0        ;
+; enet_tx_125         ; rx_clk_2p5          ; false path ; 0        ; 0        ; 0        ;
+; rx_clk_2p5          ; rx_clk_2p5          ; 1583       ; 0        ; 0        ; 0        ;
+; rx_clk_25           ; rx_clk_2p5          ; false path ; 0        ; 0        ; 0        ;
+; rx_clk_125          ; rx_clk_2p5          ; false path ; 0        ; 0        ; 0        ;
+; enet_tx_125         ; rx_clk_25           ; false path ; 0        ; 0        ; 0        ;
+; rx_clk_2p5          ; rx_clk_25           ; false path ; 0        ; 0        ; 0        ;
+; rx_clk_25           ; rx_clk_25           ; 1583       ; 0        ; 0        ; 0        ;
+; rx_clk_125          ; rx_clk_25           ; false path ; 0        ; 0        ; 0        ;
+; enet_tx_125         ; rx_clk_125          ; 3          ; 0        ; 0        ; 0        ;
+; rx_clk_2p5          ; rx_clk_125          ; false path ; 0        ; 0        ; 0        ;
+; rx_clk_25           ; rx_clk_125          ; false path ; 0        ; 0        ; 0        ;
+; rx_clk_125          ; rx_clk_125          ; 1583       ; 0        ; 0        ; 0        ;
++---------------------+---------------------+------------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------+
+; Removal Transfers                                                                       ;
++---------------------+---------------------+------------+----------+----------+----------+
+; From Clock          ; To Clock            ; RR Paths   ; FR Paths ; RF Paths ; FF Paths ;
++---------------------+---------------------+------------+----------+----------+----------+
+; altera_reserved_tck ; altera_reserved_tck ; 99         ; 0        ; 0        ; 0        ;
+; enet_tx_125         ; altera_reserved_tck ; false path ; 0        ; 0        ; 0        ;
+; clk_50_max10        ; clk_50_max10        ; 63         ; 0        ; 0        ; 0        ;
+; enet_tx_2p5         ; enet_tx_2p5         ; 1176       ; 0        ; 0        ; 0        ;
+; enet_tx_25          ; enet_tx_2p5         ; false path ; 0        ; 0        ; 0        ;
+; enet_tx_125         ; enet_tx_2p5         ; false path ; 0        ; 0        ; 0        ;
+; enet_tx_2p5         ; enet_tx_25          ; false path ; 0        ; 0        ; 0        ;
+; enet_tx_25          ; enet_tx_25          ; 1176       ; 0        ; 0        ; 0        ;
+; enet_tx_125         ; enet_tx_25          ; false path ; 0        ; 0        ; 0        ;
+; altera_reserved_tck ; enet_tx_125         ; false path ; 0        ; 0        ; 0        ;
+; clk_50_max10        ; enet_tx_125         ; 6          ; 0        ; 0        ; 0        ;
+; enet_tx_2p5         ; enet_tx_125         ; false path ; 0        ; 0        ; 0        ;
+; enet_tx_25          ; enet_tx_125         ; false path ; 0        ; 0        ; 0        ;
+; enet_tx_125         ; enet_tx_125         ; 4076       ; 0        ; 0        ; 0        ;
+; enet_tx_125         ; rx_clk_2p5          ; false path ; 0        ; 0        ; 0        ;
+; rx_clk_2p5          ; rx_clk_2p5          ; 1583       ; 0        ; 0        ; 0        ;
+; rx_clk_25           ; rx_clk_2p5          ; false path ; 0        ; 0        ; 0        ;
+; rx_clk_125          ; rx_clk_2p5          ; false path ; 0        ; 0        ; 0        ;
+; enet_tx_125         ; rx_clk_25           ; false path ; 0        ; 0        ; 0        ;
+; rx_clk_2p5          ; rx_clk_25           ; false path ; 0        ; 0        ; 0        ;
+; rx_clk_25           ; rx_clk_25           ; 1583       ; 0        ; 0        ; 0        ;
+; rx_clk_125          ; rx_clk_25           ; false path ; 0        ; 0        ; 0        ;
+; enet_tx_125         ; rx_clk_125          ; 3          ; 0        ; 0        ; 0        ;
+; rx_clk_2p5          ; rx_clk_125          ; false path ; 0        ; 0        ; 0        ;
+; rx_clk_25           ; rx_clk_125          ; false path ; 0        ; 0        ; 0        ;
+; rx_clk_125          ; rx_clk_125          ; 1583       ; 0        ; 0        ; 0        ;
++---------------------+---------------------+------------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 2     ; 2    ;
+; Unconstrained Input Ports       ; 5     ; 5    ;
+; Unconstrained Input Port Paths  ; 70    ; 70   ;
+; Unconstrained Output Ports      ; 7     ; 7    ;
+; Unconstrained Output Port Paths ; 28    ; 28   ;
++---------------------------------+-------+------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                                                                                                                            ;
++-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------+-----------+---------------+
+; Target                                                                                                                                        ; Clock               ; Type      ; Status        ;
++-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------+-----------+---------------+
+;                                                                                                                                               ; virtual_clk_2p5     ; Virtual   ; Constrained   ;
+;                                                                                                                                               ; virtual_clk_25      ; Virtual   ; Constrained   ;
+;                                                                                                                                               ; virtual_clk_125     ; Virtual   ; Constrained   ;
+; altera_reserved_tck                                                                                                                           ; altera_reserved_tck ; Base      ; Constrained   ;
+; clk_50_max10                                                                                                                                  ; clk_50_max10        ; Base      ; Constrained   ;
+; enet_gtx_clk                                                                                                                                  ; gtx_2p5_clk         ; Generated ; Constrained   ;
+; enet_gtx_clk                                                                                                                                  ; gtx_25_clk          ; Generated ; Constrained   ;
+; enet_gtx_clk                                                                                                                                  ; gtx_125_clk         ; Generated ; Constrained   ;
+; enet_rx_clk                                                                                                                                   ; rx_clk_2p5          ; Base      ; Constrained   ;
+; enet_rx_clk                                                                                                                                   ; rx_clk_25           ; Base      ; Constrained   ;
+; enet_rx_clk                                                                                                                                   ; rx_clk_125          ; Base      ; Constrained   ;
+; i_pll|altpll_component|auto_generated|pll1|clk[0]                                                                                             ; enet_tx_125         ; Generated ; Constrained   ;
+; i_pll|altpll_component|auto_generated|pll1|clk[1]                                                                                             ; enet_tx_25          ; Generated ; Constrained   ;
+; i_pll|altpll_component|auto_generated|pll1|clk[2]                                                                                             ; enet_tx_2p5         ; Generated ; Constrained   ;
+; i_pll|altpll_component|auto_generated|pll1|clk[3]                                                                                             ; enet_tx_125_shift   ; Generated ; Constrained   ;
+; qsys_top:qsys_top_0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out ;                     ; Base      ; Unconstrained ;
+; qsys_top:qsys_top_0|qsys_top_master_0:master_0|altera_avalon_packets_to_master:transacto|packets_to_master:p2m|address[10]                    ;                     ; Base      ; Unconstrained ;
++-----------------------------------------------------------------------------------------------------------------------------------------------+---------------------+-----------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                                  ;
++---------------------+--------------------------------------------------------------------------------------+
+; Input Port          ; Comment                                                                              ;
++---------------------+--------------------------------------------------------------------------------------+
+; altera_reserved_tdi ; Partially constrained                                                                ;
+; altera_reserved_tms ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; enet_mdio           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fpga_resetn         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; user_pb[0]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------------+--------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                                                                   ;
++---------------------+------------------------------------------------------------------------------------------------------------------------+
+; Output Port         ; Comment                                                                                                                ;
++---------------------+------------------------------------------------------------------------------------------------------------------------+
+; altera_reserved_tdo ; No output delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; enet_gtx_clk        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found. This port has clock assignment. ;
+; enet_mdc            ; No output delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; enet_mdio           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; enet_resetn         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; user_led[3]         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; user_led[4]         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
++---------------------+------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                                  ;
++---------------------+--------------------------------------------------------------------------------------+
+; Input Port          ; Comment                                                                              ;
++---------------------+--------------------------------------------------------------------------------------+
+; altera_reserved_tdi ; Partially constrained                                                                ;
+; altera_reserved_tms ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; enet_mdio           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fpga_resetn         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; user_pb[0]          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------------+--------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                                                                   ;
++---------------------+------------------------------------------------------------------------------------------------------------------------+
+; Output Port         ; Comment                                                                                                                ;
++---------------------+------------------------------------------------------------------------------------------------------------------------+
+; altera_reserved_tdo ; No output delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; enet_gtx_clk        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found. This port has clock assignment. ;
+; enet_mdc            ; No output delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; enet_mdio           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; enet_resetn         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; user_led[3]         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; user_led[4]         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
++---------------------+------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+    Info: Processing started: Thu Aug 02 16:03:49 2018
+Info: Command: quartus_sta Eth_max10 -c Eth_max10
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 47 combinational loops as latches. For more details, run the Check Timing command in the TimeQuest Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Info (332164): Evaluating HDL-embedded SDC commands
+    Info (332165): Entity GHVD5181
+        Info (332166): set_disable_timing [get_cells -hierarchical QXXQ6833_0]
+        Info (332166): set_disable_timing [get_cells -hierarchical JEQQ5299_0]
+        Info (332166): set_disable_timing [get_cells -hierarchical JEQQ5299_1]
+        Info (332166): set_disable_timing [get_cells -hierarchical JEQQ5299_2]
+        Info (332166): set_disable_timing [get_cells -hierarchical JEQQ5299_3]
+        Info (332166): set_disable_timing [get_cells -hierarchical JEQQ5299_4]
+        Info (332166): set_disable_timing [get_cells -hierarchical JEQQ5299_5]
+        Info (332166): set_disable_timing [get_cells -hierarchical JEQQ5299_6]
+        Info (332166): set_disable_timing [get_cells -hierarchical JEQQ5299_7]
+        Info (332166): set_disable_timing [get_cells -hierarchical BITP7563_0]
+    Info (332165): Entity altera_std_synchronizer
+        Info (332166): set_false_path -to [get_keepers {*altera_std_synchronizer:*|din_s1}]
+    Info (332165): Entity pzdyqx_impl
+        Info (332166): set_false_path -from [get_keepers {altera_reserved_tdi}] -to [get_keepers {pzdyqx*}]
+    Info (332165): Entity sld_hub
+        Info (332166): create_clock -name altera_reserved_tck [get_ports {altera_reserved_tck}] -period 10MHz   
+        Info (332166): set_clock_groups -asynchronous -group {altera_reserved_tck}
+Info (332104): Reading SDC File: 'platform/qsys_top/synthesis/submodules/altera_reset_controller.sdc'
+Info (332104): Reading SDC File: 'platform/qsys_top/synthesis/submodules/altera_eth_tse_mac.sdc'
+Info (332104): Reading SDC File: 'platform/qsys_top/synthesis/submodules/altera_avalon_st_jtag_interface.sdc'
+Info (332104): Reading SDC File: 'platform/qsys_top/synthesis/submodules/crc32.sdc'
+Warning (332174): Ignored filter at crc32.sdc(12): CLK could not be matched with a port File: C:/intelFPGA/Max10tse/max10tse(2)_project/platform/qsys_top/synthesis/submodules/crc32.sdc Line: 12
+Warning (332049): Ignored create_clock at crc32.sdc(12): Argument <targets> is an empty collection File: C:/intelFPGA/Max10tse/max10tse(2)_project/platform/qsys_top/synthesis/submodules/crc32.sdc Line: 12
+    Info (332050): create_clock -period "$DEFAULT_SYSTEM_CLOCK_SPEED" -name CRC_CLK [ get_ports  $CLK] File: C:/intelFPGA/Max10tse/max10tse(2)_project/platform/qsys_top/synthesis/submodules/crc32.sdc Line: 12
+Info (332104): Reading SDC File: 'top.sdc'
+Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Info: Output Max Delay = -0.9
+Info: Output Min Delay = -2.7
+Info: Input Max Delay for 125MHz domain= 0.8
+Info: Input Min Delay for 125MHz domain= -0.8
+Info: Input Max Delay for 25MHz domain = 8.8
+Info: Input Min Delay for 25MHz domain = -8.8
+Info: Input Max Delay for 2.5MHz domain = 98.8
+Info: Input Min Delay for 2.5MHz domain = -98.8
+Warning (332174): Ignored filter at top.sdc(138): *sld_signaltap* could not be matched with a register File: C:/intelFPGA/Max10tse/max10tse(2)_project/top.sdc Line: 138
+Warning (332049): Ignored set_false_path at top.sdc(138): Argument <to> is an empty collection File: C:/intelFPGA/Max10tse/max10tse(2)_project/top.sdc Line: 138
+    Info (332050): set_false_path -to [get_registers *sld_signaltap*] File: C:/intelFPGA/Max10tse/max10tse(2)_project/top.sdc Line: 138
+Warning (332060): Node: qsys_top:qsys_top_0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Latch qsys_top:qsys_top_0|eth_gen:eth_gen_0|prbs23:prbs_tx1|m[10]~1 is being clocked by qsys_top:qsys_top_0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out
+Warning (332060): Node: qsys_top:qsys_top_0|qsys_top_master_0:master_0|altera_avalon_packets_to_master:transacto|packets_to_master:p2m|address[10] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Latch qsys_top:qsys_top_0|st_mux_2_to_1:st_mux_2_to_1_0|avs_control_port_readdata[0] is being clocked by qsys_top:qsys_top_0|qsys_top_master_0:master_0|altera_avalon_packets_to_master:transacto|packets_to_master:p2m|address[10]
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: altera_internal_jtag  from: tck  to: tckutap
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Warning (332056): PLL cross checking found inconsistent PLL clock settings:
+    Warning (332056): Clock: enet_tx_125 was found on node: i_pll|altpll_component|auto_generated|pll1|clk[0] with settings that do not match the following PLL specifications:
+        Warning (332056): -phase (expected: 11.25, found: 0.00)
+    Warning (332056): Clock: enet_tx_25 was found on node: i_pll|altpll_component|auto_generated|pll1|clk[1] with settings that do not match the following PLL specifications:
+        Warning (332056): -phase (expected: 2.25, found: 0.00)
+    Warning (332056): Clock: enet_tx_2p5 was found on node: i_pll|altpll_component|auto_generated|pll1|clk[2] with settings that do not match the following PLL specifications:
+        Warning (332056): -phase (expected: 0.23, found: 0.00)
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Info (332146): Worst-case setup slack is 0.082
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.082               0.000 enet_tx_125 
+    Info (332119):     0.097               0.000 gtx_125_clk 
+    Info (332119):     0.341               0.000 rx_clk_125 
+    Info (332119):     0.341               0.000 rx_clk_25 
+    Info (332119):     0.341               0.000 rx_clk_2p5 
+    Info (332119):     0.808               0.000 gtx_2p5_clk 
+    Info (332119):     0.869               0.000 gtx_25_clk 
+    Info (332119):     3.230               0.000 enet_tx_25 
+    Info (332119):     3.230               0.000 enet_tx_2p5 
+    Info (332119):    16.691               0.000 clk_50_max10 
+    Info (332119):    45.073               0.000 altera_reserved_tck 
+Info (332146): Worst-case hold slack is 0.171
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.171               0.000 gtx_125_clk 
+    Info (332119):     0.309               0.000 altera_reserved_tck 
+    Info (332119):     0.310               0.000 enet_tx_125 
+    Info (332119):     0.310               0.000 enet_tx_25 
+    Info (332119):     0.310               0.000 enet_tx_2p5 
+    Info (332119):     0.322               0.000 rx_clk_125 
+    Info (332119):     0.322               0.000 rx_clk_25 
+    Info (332119):     0.322               0.000 rx_clk_2p5 
+    Info (332119):     0.325               0.000 clk_50_max10 
+    Info (332119):    15.968               0.000 gtx_25_clk 
+    Info (332119):   195.898               0.000 gtx_2p5_clk 
+Info (332146): Worst-case recovery slack is 2.224
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     2.224               0.000 enet_tx_125 
+    Info (332119):     3.898               0.000 rx_clk_125 
+    Info (332119):    17.496               0.000 clk_50_max10 
+    Info (332119):    35.359               0.000 enet_tx_25 
+    Info (332119):    35.898               0.000 rx_clk_25 
+    Info (332119):    96.027               0.000 rx_clk_2p5 
+    Info (332119):    96.377               0.000 enet_tx_2p5 
+    Info (332119):    96.961               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.887
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.887               0.000 enet_tx_125 
+    Info (332119):     1.021               0.000 altera_reserved_tck 
+    Info (332119):     1.827               0.000 clk_50_max10 
+    Info (332119):     2.612               0.000 enet_tx_25 
+    Info (332119):     2.612               0.000 enet_tx_2p5 
+    Info (332119):     2.622               0.000 rx_clk_125 
+    Info (332119):     2.622               0.000 rx_clk_25 
+    Info (332119):     2.622               0.000 rx_clk_2p5 
+Info (332146): Worst-case minimum pulse width slack is 3.502
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     3.502               0.000 rx_clk_125 
+    Info (332119):     3.604               0.000 enet_tx_125 
+    Info (332119):     3.701               0.000 enet_tx_125_shift 
+    Info (332119):     4.000               0.000 gtx_125_clk 
+    Info (332119):     9.695               0.000 clk_50_max10 
+    Info (332119):    19.502               0.000 rx_clk_25 
+    Info (332119):    19.649               0.000 enet_tx_25 
+    Info (332119):    36.000               0.000 gtx_25_clk 
+    Info (332119):    49.578               0.000 altera_reserved_tck 
+    Info (332119):   199.502               0.000 rx_clk_2p5 
+    Info (332119):   199.658               0.000 enet_tx_2p5 
+    Info (332119):   396.000               0.000 gtx_2p5_clk 
+Info (332114): Report Metastability: Found 410 synchronizer chains.
+    Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+    Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+
+    Info (332114): Number of Synchronizer Chains Found: 410
+    Info (332114): Shortest Synchronizer Chain: 2 Registers
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.512
+    Info (332114): Worst Case Available Settling Time: 4.374 ns
+    Info (332114): 
+    Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
+    Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 2.4
+    Info (332114): Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
+    Info (332114):   - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 3.7
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
+Info (334004): Delay annotation completed successfully
+Warning (332060): Node: qsys_top:qsys_top_0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Latch qsys_top:qsys_top_0|eth_gen:eth_gen_0|prbs23:prbs_tx1|m[10]~1 is being clocked by qsys_top:qsys_top_0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out
+Warning (332060): Node: qsys_top:qsys_top_0|qsys_top_master_0:master_0|altera_avalon_packets_to_master:transacto|packets_to_master:p2m|address[10] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Latch qsys_top:qsys_top_0|st_mux_2_to_1:st_mux_2_to_1_0|avs_control_port_readdata[0] is being clocked by qsys_top:qsys_top_0|qsys_top_master_0:master_0|altera_avalon_packets_to_master:transacto|packets_to_master:p2m|address[10]
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: altera_internal_jtag  from: tck  to: tckutap
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Warning (332056): PLL cross checking found inconsistent PLL clock settings:
+    Warning (332056): Clock: enet_tx_125 was found on node: i_pll|altpll_component|auto_generated|pll1|clk[0] with settings that do not match the following PLL specifications:
+        Warning (332056): -phase (expected: 11.25, found: 0.00)
+    Warning (332056): Clock: enet_tx_25 was found on node: i_pll|altpll_component|auto_generated|pll1|clk[1] with settings that do not match the following PLL specifications:
+        Warning (332056): -phase (expected: 2.25, found: 0.00)
+    Warning (332056): Clock: enet_tx_2p5 was found on node: i_pll|altpll_component|auto_generated|pll1|clk[2] with settings that do not match the following PLL specifications:
+        Warning (332056): -phase (expected: 0.23, found: 0.00)
+Info (332146): Worst-case setup slack is 0.200
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.200               0.000 gtx_125_clk 
+    Info (332119):     0.404               0.000 rx_clk_125 
+    Info (332119):     0.404               0.000 rx_clk_25 
+    Info (332119):     0.404               0.000 rx_clk_2p5 
+    Info (332119):     0.770               0.000 enet_tx_125 
+    Info (332119):     0.848               0.000 gtx_2p5_clk 
+    Info (332119):     0.902               0.000 gtx_25_clk 
+    Info (332119):     3.574               0.000 enet_tx_25 
+    Info (332119):     3.574               0.000 enet_tx_2p5 
+    Info (332119):    16.958               0.000 clk_50_max10 
+    Info (332119):    45.527               0.000 altera_reserved_tck 
+Info (332146): Worst-case hold slack is 0.203
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.203               0.000 gtx_125_clk 
+    Info (332119):     0.280               0.000 altera_reserved_tck 
+    Info (332119):     0.281               0.000 enet_tx_125 
+    Info (332119):     0.281               0.000 enet_tx_25 
+    Info (332119):     0.281               0.000 enet_tx_2p5 
+    Info (332119):     0.294               0.000 rx_clk_125 
+    Info (332119):     0.294               0.000 rx_clk_25 
+    Info (332119):     0.294               0.000 rx_clk_2p5 
+    Info (332119):     0.295               0.000 clk_50_max10 
+    Info (332119):    16.047               0.000 gtx_25_clk 
+    Info (332119):   195.983               0.000 gtx_2p5_clk 
+Info (332146): Worst-case recovery slack is 2.794
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     2.794               0.000 enet_tx_125 
+    Info (332119):     4.265               0.000 rx_clk_125 
+    Info (332119):    17.695               0.000 clk_50_max10 
+    Info (332119):    35.835               0.000 enet_tx_25 
+    Info (332119):    36.265               0.000 rx_clk_25 
+    Info (332119):    96.406               0.000 rx_clk_2p5 
+    Info (332119):    96.729               0.000 enet_tx_2p5 
+    Info (332119):    97.254               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.823
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.823               0.000 enet_tx_125 
+    Info (332119):     0.947               0.000 altera_reserved_tck 
+    Info (332119):     1.667               0.000 clk_50_max10 
+    Info (332119):     2.386               0.000 enet_tx_25 
+    Info (332119):     2.386               0.000 enet_tx_2p5 
+    Info (332119):     2.391               0.000 rx_clk_125 
+    Info (332119):     2.391               0.000 rx_clk_25 
+    Info (332119):     2.391               0.000 rx_clk_2p5 
+Info (332146): Worst-case minimum pulse width slack is 3.522
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     3.522               0.000 rx_clk_125 
+    Info (332119):     3.647               0.000 enet_tx_125 
+    Info (332119):     3.760               0.000 enet_tx_125_shift 
+    Info (332119):     4.000               0.000 gtx_125_clk 
+    Info (332119):     9.692               0.000 clk_50_max10 
+    Info (332119):    19.522               0.000 rx_clk_25 
+    Info (332119):    19.686               0.000 enet_tx_25 
+    Info (332119):    36.000               0.000 gtx_25_clk 
+    Info (332119):    49.602               0.000 altera_reserved_tck 
+    Info (332119):   199.522               0.000 rx_clk_2p5 
+    Info (332119):   199.694               0.000 enet_tx_2p5 
+    Info (332119):   396.000               0.000 gtx_2p5_clk 
+Info (332114): Report Metastability: Found 410 synchronizer chains.
+    Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+    Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+
+    Info (332114): Number of Synchronizer Chains Found: 410
+    Info (332114): Shortest Synchronizer Chain: 2 Registers
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.512
+    Info (332114): Worst Case Available Settling Time: 4.712 ns
+    Info (332114): 
+    Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
+    Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 2.4
+    Info (332114): Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
+    Info (332114):   - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 3.7
+Info: Analyzing Fast 1200mV 0C Model
+Warning (332060): Node: qsys_top:qsys_top_0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Latch qsys_top:qsys_top_0|eth_gen:eth_gen_0|prbs23:prbs_tx1|m[10]~1 is being clocked by qsys_top:qsys_top_0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out
+Warning (332060): Node: qsys_top:qsys_top_0|qsys_top_master_0:master_0|altera_avalon_packets_to_master:transacto|packets_to_master:p2m|address[10] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Latch qsys_top:qsys_top_0|st_mux_2_to_1:st_mux_2_to_1_0|avs_control_port_readdata[0] is being clocked by qsys_top:qsys_top_0|qsys_top_master_0:master_0|altera_avalon_packets_to_master:transacto|packets_to_master:p2m|address[10]
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: altera_internal_jtag  from: tck  to: tckutap
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Warning (332056): PLL cross checking found inconsistent PLL clock settings:
+    Warning (332056): Clock: enet_tx_125 was found on node: i_pll|altpll_component|auto_generated|pll1|clk[0] with settings that do not match the following PLL specifications:
+        Warning (332056): -phase (expected: 11.25, found: 0.00)
+    Warning (332056): Clock: enet_tx_25 was found on node: i_pll|altpll_component|auto_generated|pll1|clk[1] with settings that do not match the following PLL specifications:
+        Warning (332056): -phase (expected: 2.25, found: 0.00)
+    Warning (332056): Clock: enet_tx_2p5 was found on node: i_pll|altpll_component|auto_generated|pll1|clk[2] with settings that do not match the following PLL specifications:
+        Warning (332056): -phase (expected: 0.23, found: 0.00)
+Info (332146): Worst-case setup slack is 0.553
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.553               0.000 gtx_125_clk 
+    Info (332119):     0.707               0.000 rx_clk_125 
+    Info (332119):     0.707               0.000 rx_clk_25 
+    Info (332119):     0.707               0.000 rx_clk_2p5 
+    Info (332119):     0.786               0.000 gtx_2p5_clk 
+    Info (332119):     0.816               0.000 gtx_25_clk 
+    Info (332119):     4.093               0.000 enet_tx_125 
+    Info (332119):     5.137               0.000 enet_tx_25 
+    Info (332119):     5.137               0.000 enet_tx_2p5 
+    Info (332119):    18.451               0.000 clk_50_max10 
+    Info (332119):    47.859               0.000 altera_reserved_tck 
+Info (332146): Worst-case hold slack is 0.141
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.141               0.000 altera_reserved_tck 
+    Info (332119):     0.143               0.000 enet_tx_125 
+    Info (332119):     0.143               0.000 enet_tx_25 
+    Info (332119):     0.143               0.000 enet_tx_2p5 
+    Info (332119):     0.148               0.000 rx_clk_125 
+    Info (332119):     0.148               0.000 rx_clk_25 
+    Info (332119):     0.148               0.000 rx_clk_2p5 
+    Info (332119):     0.149               0.000 clk_50_max10 
+    Info (332119):     0.533               0.000 gtx_125_clk 
+    Info (332119):    16.616               0.000 gtx_25_clk 
+    Info (332119):   196.574               0.000 gtx_2p5_clk 
+Info (332146): Worst-case recovery slack is 4.960
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.960               0.000 enet_tx_125 
+    Info (332119):     5.873               0.000 rx_clk_125 
+    Info (332119):    18.710               0.000 clk_50_max10 
+    Info (332119):    37.653               0.000 enet_tx_25 
+    Info (332119):    37.873               0.000 rx_clk_25 
+    Info (332119):    97.899               0.000 rx_clk_2p5 
+    Info (332119):    98.052               0.000 enet_tx_2p5 
+    Info (332119):    98.459               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.410
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.410               0.000 enet_tx_125 
+    Info (332119):     0.467               0.000 altera_reserved_tck 
+    Info (332119):     0.851               0.000 clk_50_max10 
+    Info (332119):     1.369               0.000 enet_tx_25 
+    Info (332119):     1.369               0.000 enet_tx_2p5 
+    Info (332119):     1.370               0.000 rx_clk_125 
+    Info (332119):     1.370               0.000 rx_clk_25 
+    Info (332119):     1.370               0.000 rx_clk_2p5 
+Info (332146): Worst-case minimum pulse width slack is 3.411
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     3.411               0.000 rx_clk_125 
+    Info (332119):     3.663               0.000 enet_tx_125 
+    Info (332119):     3.676               0.000 enet_tx_125_shift 
+    Info (332119):     4.000               0.000 gtx_125_clk 
+    Info (332119):     9.762               0.000 clk_50_max10 
+    Info (332119):    19.411               0.000 rx_clk_25 
+    Info (332119):    19.687               0.000 enet_tx_25 
+    Info (332119):    36.000               0.000 gtx_25_clk 
+    Info (332119):    49.420               0.000 altera_reserved_tck 
+    Info (332119):   199.411               0.000 rx_clk_2p5 
+    Info (332119):   199.681               0.000 enet_tx_2p5 
+    Info (332119):   396.000               0.000 gtx_2p5_clk 
+Info (332114): Report Metastability: Found 410 synchronizer chains.
+    Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+    Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+
+    Info (332114): Number of Synchronizer Chains Found: 410
+    Info (332114): Shortest Synchronizer Chain: 2 Registers
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.512
+    Info (332114): Worst Case Available Settling Time: 6.057 ns
+    Info (332114): 
+    Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
+    Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 2.4
+    Info (332114): Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
+    Info (332114):   - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 3.7
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 34 warnings
+    Info: Peak virtual memory: 989 megabytes
+    Info: Processing ended: Thu Aug 02 16:04:08 2018
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:27
+
+

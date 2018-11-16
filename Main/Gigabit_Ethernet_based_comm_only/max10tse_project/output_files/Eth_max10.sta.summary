@@ -1,0 +1,605 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'enet_tx_125'
+Slack : 0.082
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'gtx_125_clk'
+Slack : 0.097
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'rx_clk_125'
+Slack : 0.341
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'rx_clk_25'
+Slack : 0.341
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'rx_clk_2p5'
+Slack : 0.341
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'gtx_2p5_clk'
+Slack : 0.808
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'gtx_25_clk'
+Slack : 0.869
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'enet_tx_25'
+Slack : 3.230
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'enet_tx_2p5'
+Slack : 3.230
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'clk_50_max10'
+Slack : 16.691
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'altera_reserved_tck'
+Slack : 45.073
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'gtx_125_clk'
+Slack : 0.171
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.309
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'enet_tx_125'
+Slack : 0.310
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'enet_tx_25'
+Slack : 0.310
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'enet_tx_2p5'
+Slack : 0.310
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'rx_clk_125'
+Slack : 0.322
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'rx_clk_25'
+Slack : 0.322
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'rx_clk_2p5'
+Slack : 0.322
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk_50_max10'
+Slack : 0.325
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'gtx_25_clk'
+Slack : 15.968
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'gtx_2p5_clk'
+Slack : 195.898
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'enet_tx_125'
+Slack : 2.224
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'rx_clk_125'
+Slack : 3.898
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'clk_50_max10'
+Slack : 17.496
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'enet_tx_25'
+Slack : 35.359
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'rx_clk_25'
+Slack : 35.898
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'rx_clk_2p5'
+Slack : 96.027
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'enet_tx_2p5'
+Slack : 96.377
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 96.961
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'enet_tx_125'
+Slack : 0.887
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'altera_reserved_tck'
+Slack : 1.021
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clk_50_max10'
+Slack : 1.827
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'enet_tx_25'
+Slack : 2.612
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'enet_tx_2p5'
+Slack : 2.612
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'rx_clk_125'
+Slack : 2.622
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'rx_clk_25'
+Slack : 2.622
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'rx_clk_2p5'
+Slack : 2.622
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'rx_clk_125'
+Slack : 3.502
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'enet_tx_125'
+Slack : 3.604
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'enet_tx_125_shift'
+Slack : 3.701
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'gtx_125_clk'
+Slack : 4.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_50_max10'
+Slack : 9.695
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'rx_clk_25'
+Slack : 19.502
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'enet_tx_25'
+Slack : 19.649
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'gtx_25_clk'
+Slack : 36.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.578
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'rx_clk_2p5'
+Slack : 199.502
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'enet_tx_2p5'
+Slack : 199.658
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'gtx_2p5_clk'
+Slack : 396.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'gtx_125_clk'
+Slack : 0.200
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'rx_clk_125'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'rx_clk_25'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'rx_clk_2p5'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'enet_tx_125'
+Slack : 0.770
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'gtx_2p5_clk'
+Slack : 0.848
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'gtx_25_clk'
+Slack : 0.902
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'enet_tx_25'
+Slack : 3.574
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'enet_tx_2p5'
+Slack : 3.574
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk_50_max10'
+Slack : 16.958
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'altera_reserved_tck'
+Slack : 45.527
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'gtx_125_clk'
+Slack : 0.203
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.280
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'enet_tx_125'
+Slack : 0.281
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'enet_tx_25'
+Slack : 0.281
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'enet_tx_2p5'
+Slack : 0.281
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'rx_clk_125'
+Slack : 0.294
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'rx_clk_25'
+Slack : 0.294
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'rx_clk_2p5'
+Slack : 0.294
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk_50_max10'
+Slack : 0.295
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'gtx_25_clk'
+Slack : 16.047
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'gtx_2p5_clk'
+Slack : 195.983
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'enet_tx_125'
+Slack : 2.794
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'rx_clk_125'
+Slack : 4.265
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'clk_50_max10'
+Slack : 17.695
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'enet_tx_25'
+Slack : 35.835
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'rx_clk_25'
+Slack : 36.265
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'rx_clk_2p5'
+Slack : 96.406
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'enet_tx_2p5'
+Slack : 96.729
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 97.254
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'enet_tx_125'
+Slack : 0.823
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.947
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'clk_50_max10'
+Slack : 1.667
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'enet_tx_25'
+Slack : 2.386
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'enet_tx_2p5'
+Slack : 2.386
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'rx_clk_125'
+Slack : 2.391
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'rx_clk_25'
+Slack : 2.391
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'rx_clk_2p5'
+Slack : 2.391
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'rx_clk_125'
+Slack : 3.522
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'enet_tx_125'
+Slack : 3.647
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'enet_tx_125_shift'
+Slack : 3.760
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'gtx_125_clk'
+Slack : 4.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_50_max10'
+Slack : 9.692
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'rx_clk_25'
+Slack : 19.522
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'enet_tx_25'
+Slack : 19.686
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'gtx_25_clk'
+Slack : 36.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.602
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'rx_clk_2p5'
+Slack : 199.522
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'enet_tx_2p5'
+Slack : 199.694
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'gtx_2p5_clk'
+Slack : 396.000
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'gtx_125_clk'
+Slack : 0.553
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'rx_clk_125'
+Slack : 0.707
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'rx_clk_25'
+Slack : 0.707
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'rx_clk_2p5'
+Slack : 0.707
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'gtx_2p5_clk'
+Slack : 0.786
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'gtx_25_clk'
+Slack : 0.816
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'enet_tx_125'
+Slack : 4.093
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'enet_tx_25'
+Slack : 5.137
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'enet_tx_2p5'
+Slack : 5.137
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk_50_max10'
+Slack : 18.451
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'altera_reserved_tck'
+Slack : 47.859
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.141
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'enet_tx_125'
+Slack : 0.143
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'enet_tx_25'
+Slack : 0.143
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'enet_tx_2p5'
+Slack : 0.143
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'rx_clk_125'
+Slack : 0.148
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'rx_clk_25'
+Slack : 0.148
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'rx_clk_2p5'
+Slack : 0.148
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_50_max10'
+Slack : 0.149
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'gtx_125_clk'
+Slack : 0.533
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'gtx_25_clk'
+Slack : 16.616
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'gtx_2p5_clk'
+Slack : 196.574
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'enet_tx_125'
+Slack : 4.960
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'rx_clk_125'
+Slack : 5.873
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'clk_50_max10'
+Slack : 18.710
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'enet_tx_25'
+Slack : 37.653
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'rx_clk_25'
+Slack : 37.873
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'rx_clk_2p5'
+Slack : 97.899
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'enet_tx_2p5'
+Slack : 98.052
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 98.459
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'enet_tx_125'
+Slack : 0.410
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clk_50_max10'
+Slack : 0.851
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'enet_tx_25'
+Slack : 1.369
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'enet_tx_2p5'
+Slack : 1.369
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'rx_clk_125'
+Slack : 1.370
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'rx_clk_25'
+Slack : 1.370
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'rx_clk_2p5'
+Slack : 1.370
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'rx_clk_125'
+Slack : 3.411
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'enet_tx_125'
+Slack : 3.663
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'enet_tx_125_shift'
+Slack : 3.676
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'gtx_125_clk'
+Slack : 4.000
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_50_max10'
+Slack : 9.762
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'rx_clk_25'
+Slack : 19.411
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'enet_tx_25'
+Slack : 19.687
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'gtx_25_clk'
+Slack : 36.000
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.420
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'rx_clk_2p5'
+Slack : 199.411
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'enet_tx_2p5'
+Slack : 199.681
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'gtx_2p5_clk'
+Slack : 396.000
+TNS   : 0.000
+
+------------------------------------------------------------
