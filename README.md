@@ -9,31 +9,31 @@ Design Overview
 
 ![Physical Door Handle](img/phy_door_handle.jpg "Physical Door Handle")
 
-**Figure 7: Physical Door Handle**
+**Figure 1: Physical Door Handle**
 
 ![Verilog Module Control Flow Diagram - RS232 based](img/Flow_rs232.jpg "Verilog Module Control Flow Diagram - RS232 based")
 
-**Figure 1: Verilog Module Control Flow Diagram - RS232 based**
+**Figure 2: Verilog Module Control Flow Diagram - RS232 based**
 
 ![Verilog Module Control Flow Diagram - Ethernet based](img/flow_eth.jpg "Verilog Module Control Flow Diagram - Ethernet based")
 
-**Figure 2: Verilog Module Control Flow Diagram - Ethernet based**
+**Figure 3: Verilog Module Control Flow Diagram - Ethernet based**
 
 ![Ethernet Packet Generator](img/eth-packet-generator.jpg "Ethernet Packet Generator")
 
-**Figure 3: Ethernet Packet Generator**
+**Figure 4: Ethernet Packet Generator**
 
 ![Ethernet Packet Generator Output Frame Format](img/epg-output-frame-format.jpg "Ethernet Packet Generator Output Frame Format")
 
-**Figure 4: Ethernet Packet Generator Output Frame Format**
+**Figure 5: Ethernet Packet Generator Output Frame Format**
 
 ![Ethernet Packet Monitor](img/eth-packet-monitor.jpg "Ethernet Packet Monitor")
 
-**Figure 5: Ethernet Packet Monitor**
+**Figure 6: Ethernet Packet Monitor**
 
 ![Door Handle Telegram](img/telegram.jpg "Door Handle Telegram")
 
-**Figure 6: Door Handle Telegram**
+**Figure 7: Door Handle Telegram**
 
 ![Bit Coding-Low and High pulse values for door handle protocol](img/telegram2.jpg "Bit Coding-Low and High pulse values for door handle protocol")
 
