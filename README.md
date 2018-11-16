@@ -23,6 +23,6 @@ Design Overview
 
 **Figure 4: Ethernet Packet Generator Output Frame Format**
 
-![Ethernet Packet Monitor](img/flow_eth.jpg "Ethernet Packet Monitor")
+![Ethernet Packet Monitor](img/eth_packet_monitor.jpg "Ethernet Packet Monitor")
 
 **Figure 5: Ethernet Packet Monitor**
