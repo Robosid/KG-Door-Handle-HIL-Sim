@@ -26,3 +26,15 @@ Design Overview
 ![Ethernet Packet Monitor](img/eth-packet-monitor.jpg "Ethernet Packet Monitor")
 
 **Figure 5: Ethernet Packet Monitor**
+
+![Door Handle Telegram](img/telegram.jpg "Door Handle Telegram")
+
+**Figure 6: Door Handle Telegram**
+
+![Physical Door Handle](img/phy_door_handle.jpg "Physical Door Handle")
+
+**Figure 7: Physical Door Handle**
+
+![Bit Coding-Low and High pulse values for door handle protocol](img/telegram2.jpg "Bit Coding-Low and High pulse values for door handle protocol")
+
+**Figure 8: Bit Coding-Low and High pulse values for door handle protocol**
